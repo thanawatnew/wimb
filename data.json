@@ -1,0 +1,2252 @@
+var locations=
+[
+['198'
+,'ใกล้ซอยจันทน์ 15/1 ถนนจันทน์'
+,'Near Soi Chan 15/1 on Chan Road'
+,'รถมาจากแยกตรอกจันทน์ มุ่งหน้าไปแยกจันทน์-นราธิวาส'
+,'From Ruam Chit Intersection towards Chan-Naradhiwas Intersection'
+,13.70542
+,100.53364
+,'10.128.129.133'
+],['199'
+,'ใกล้ซอยจันทน์ 15/1 ถนนจันทน์'
+,'Near Soi Chan 15/1 on Chan Road'
+,'รถมาจากแยกจันทน์-นราธิวาส มุ่งหน้าไปแยกตรอกจันทน์'
+,'From Chan-Naradhiwas Intersection towards Ruam Chit Intersection'
+,13.70541
+,100.53366
+,'10.128.129.134'
+],['200'
+,'ใกล้ซอยจันทน์ 35 ถนนจันทน์'
+,'Near Soi Chan 35 on Chan Road'
+,'รถมาจากแยกจันทน์-สาธุประดิษฐ์  มุ่งหน้าไปแยกใต้ทางด่วนจันทน์'
+,'From Chan-Sathu Pradit Intersection Intersection towards Intersection under Chan Expy'
+,13.70681
+,100.52352
+,'10.128.129.135'
+],['201'
+,'ใกล้ซอยจันทน์ 35 ถนนจันทน์'
+,'Near Soi Chan 35 on Chan Road'
+,'รถมาจากแยกใต้ทางด่วนจันทน์ มุ่งหน้าไปแยกจันทน์-สาธุประดิษฐ์'
+,'From Intersection under Chan Expy towards Chan-Sathu Pradit Intersection'
+,13.70685
+,100.52353
+,'10.128.129.136'
+],['208'
+,'ใกล้ซอยจันทน์ 55 ถนนจันทน์'
+,'Near Soi Chan 55 on Chan Road'
+,'รถมาจากแยกใต้ทางด่วนจันทร์'
+,'From Charoen Krung'
+,13.70884
+,100.51455
+,'10.128.129.137'
+],['209'
+,'ใกล้ซอยจันทน์ 55 ถนนจันทน์'
+,'Near Soi Chan 55 on Chan Road'
+,'รถมาจากแยกตรอกจันทร์'
+,'From Khlong Toei'
+,13.7089
+,100.51457
+,'10.128.129.138'
+],['202'
+,'ใกล้ซอยเจริญกรุง 61 ถนนเจริญกรุง'
+,'Near Soi Charoen Krung 31 on Charoen Krung Road'
+,'รถมาจากแยกตรอกจันทน์ มุ่งหน้าไปแยกสาทร-เจริญกรุง'
+,'From Tok Chan Intersection towards Sathon-Charoen Krung Intersection'
+,13.71455
+,100.5134
+,'10.128.129.139'
+],['203'
+,'ใกล้ซอยเจริญกรุง 61 ถนนเจริญกรุง'
+,'Near Soi Charoen Krung 31 on Charoen Krung Road'
+,'รถมาจากแยกสาทร-เจริญกรุง มุ่งหน้าไปแยกตรอกจันทน์'
+,'From Sathon-Charoen Krung Intersection towards Ruam Chit Intersection'
+,13.71452
+,100.51337
+,'10.128.129.140'
+],['70'
+,'ใกล้ธนาคารธนชาติ สาขาบางขุนพรหม ถนนสามเสน'
+,'Near Thanachart Bank Public Company Limited,Branch Bang Khunphrom on Sam Sen Road'
+,'รถมาจากแยกเทเวศน์'
+,'From Thewet Intersection'
+,13.76855
+,100.50275
+,'10.101.128.24'
+],['187'
+,'ใกล้บีควิกพระราม 3 ถนนรัชดาภิเษก'
+,'Near B-Quik Rama 3 on Ratchadaphisek Road'
+,'รถมาจากแยกด่วนสาธุประดิษฐ์ มุ่งหน้าไปแยกรัชดา-นราธิวาส'
+,'From Sathu Pradit Intersection towards Ratchada-Naradhiwas Intersection'
+,13.69932
+,100.54059
+,'10.112.129.128'
+],['184'
+,'ใกล้สะพานลอยสถานี BRT พระราม 3 ถนนนราธิวาส'
+,'Near the skybridge of Rama 3 BRT Station on Narathiwas Road'
+,'รถมาจากแยกพระรามที่ 3-นราธิวาส มุ่งหน้าไปแยกรัชดา-นราธิวาส'
+,'From Rama3-Naradhiwas Intersection towards Ratchada-Naradhiwas Intersection'
+,13.69619
+,100.5453
+,'10.112.129.125'
+],['185'
+,'ใกล้สะพานลอยสถานี BRT พระราม 3 ถนนนราธิวาส'
+,'Near the skybridge of Rama 3 BRT Station on Narathiwas Road'
+,'รถมาจากแยกรัชดา-นราธิวาส มุ่งหน้าไปแยกพระรามที่ 3-นราธิวาส'
+,'From Ratchada-Naradhiwas Intersection towards Rama3-Naradhiwas Intersection'
+,13.69656
+,100.54538
+,'10.112.129.126'
+],['152'
+,'ตรงข้ามกรมทหารม้าที่ 3 รักษาพระองค์ ถนนทหาร'
+,'Opposite Regiment Cavalry 3th,King s(Royal)Guard on Thahan Road'
+,'รถมาจากแยกเกียกกาย มุ่งหน้าไปแยกสะพานแดง'
+,'From Kiak Kai Intersection towards Saphan Daeng Bridge Intersection'
+,13.79613
+,100.52418
+,'10.102.129.133'
+],['153'
+,'ตรงข้ามกรมทหารม้าที่ 3 รักษาพระองค์ ถนนทหาร'
+,'Opposite Regiment Cavalry 3th,King s(Royal)Guard on Thahan Road'
+,'รถมาจากแยกสะพานแดง มุ่งหน้าไปแยกเกียกกาย'
+,'From Saphan Daeng Bridge Intersection towards Kiak Kai Intersection'
+,13.79608
+,100.52422
+,'10.102.129.134'
+],['25'
+,'ตรงข้ามบริษัท กันกุล เอ็นจิเนียริ่ง จำกัด (มหาชน) ปากซอยร่วมจิตต์ 2 ถนนนครไชยศรี'
+,'Opposite Kankul Engineering Company Limited,Soi Ruam Chit 2 on Nakhon Chaisi Road'
+,'รถมาจากแยกศรีย่าน'
+,'From Si Yan Intersection'
+,13.78285
+,100.51627
+,'10.102.128.54'
+],['233'
+,'ตรงข้ามพระตำหนักจิตรลดารโหฐาน ถนนพระราม 5'
+,'Opposite Chitralada Palace on Rama 5 Road'
+,'รถมาจากแยกราชวิถี มุ่งหน้าไปแยกวัดเบญจมบพิตร'
+,'From Ratchawithi Intersection towards Wat Benchamabophit Intersection'
+,13.76967
+,100.51695
+,'10.102.129.137'
+],['234'
+,'ตรงข้ามพระตำหนักจิตรลดารโหฐาน ถนนพระราม 5'
+,'Opposite Chitralada Palace on Rama 5 Road'
+,'รถมาจากแยกวัดเบญจมบพิตร มุ่งหน้าไปแยกราชวิถี'
+,'From Wat Benchamabophit Intersection towards Ratchawithi Intersection'
+,13.76964
+,100.51698
+,'10.102.129.138'
+],['477'
+,'แนวถนนพระราม 4'
+,'Rama 4 Road'
+,''
+,''
+,13.72804
+,100.53998
+,'10.107.102.121'
+],['422'
+,'แนวถนนพระสุเมรุ'
+,'Phra Sumen Road'
+,'หน้าวัดบวรนิเวศวิหาร มุ่งหน้าป้อมพระสุเมรุ'
+,'In front of Wat Bowonniwet Vihara towards Pom Phra Sumen'
+,13.76086
+,100.50022
+,'10.101.102.249'
+],['423'
+,'แนวถนนพระสุเมรุ'
+,'Phra Sumen Road'
+,'หน้าธ.กสิกรสาขาบางลำพู มุ่งหน้าป้อมประสุเมรุ'
+,'In front of Kasikorn Bank (Bang Lamphu Branch) towards Pom Phra Sumen'
+,13.76129
+,100.49973
+,'10.101.102.253'
+],['424'
+,'แนวถนนพระสุเมรุ'
+,'Phra Sumen Road'
+,'ตรงข้ามวัดบวรนิเวศวิหาร มุ่งหน้าแยกสะพานวันชาติ'
+,'Opposite from Wat Bowonniwet Vihara towards Saphan Wan Chat Intersection'
+,13.76093
+,100.5003
+,'10.101.102.254'
+],['425'
+,'แนวถนนย่านบางลำพู'
+,'Bang Lamphu Road'
+,'ถ.สิบสามห้าง มาจากวงเวียนวัดบวรฯ'
+,'Sip Sam Hang Road from Wat Bowonniwet Vihara '
+,13.76101
+,100.49956
+,'10.101.103.1'
+],['426'
+,'แนวถนนย่านบางลำพู'
+,'Bang Lamphu Road'
+,'ถ.สิบสามห้าง มุ่งหน้าไปถ.พระสุเมรุ'
+,'Sip Sam Hang Road towards Phra Sumen Road'
+,13.76101
+,100.49955
+,'10.101.103.2'
+],['427'
+,'แนวถนนย่านพาหุรัด'
+,'Phahurat Road'
+,'ถ.พาหุรัด มุ่งหน้าแยกพาหุรัด'
+,'Phahurat Road towards Phahurat Intersection'
+,13.74511
+,100.49953
+,'10.101.103.17'
+],['415'
+,'แนวถนนสามเสน'
+,'Sam Sen Road'
+,'มุ่งหน้าแยกบางขุนพรหม'
+,'Towards Bangkhunprom Intersection'
+,13.767
+,100.5012
+,'10.101.102.206'
+],['416'
+,'แนวถนนสามเสน'
+,'Sam Sen Road'
+,'มุ่งหน้าแยกบางขุนพรหม'
+,'Towards Bangkhunprom Intersection'
+,13.76688
+,100.50109
+,'10.101.102.211'
+],['417'
+,'แนวถนนสามเสน'
+,'Sam Sen Road'
+,'มุ่งหน้าแยกบางลำภู'
+,'Towards Bang Lamphu Intersection'
+,13.76694
+,100.50122
+,'10.101.102.213'
+],['418'
+,'แนวถนนสามเสน'
+,'Sam Sen Road'
+,'สามเสน 10 มุ่งหน้าแยกบางขุนพรหม'
+,'Sam Sen 10 towards Bangkhunprom Intersection'
+,13.76693
+,100.50111
+,'10.101.102.216'
+],['419'
+,'แนวถนนสามเสน'
+,'Sam Sen Road'
+,'สามเสน 8 มุ่งหน้าสนข.พระนคร'
+,'Sam Sen 8 towards Phra Nakhon Police Station'
+,13.76697
+,100.50115
+,'10.101.102.222'
+],['420'
+,'แนวถนนสามเสน'
+,'Sam Sen Road'
+,'สามเสน 3 มุ่งหน้าแยกบางขุนพรหม'
+,'Sam Sen 3 towards Bangkhunprom Intersection'
+,13.76689
+,100.50112
+,'10.101.102.224'
+],['414'
+,'บริเวณใต้สะพานพุทธ'
+,'Below/Under Phra Phuttha Yodfa Bridge (Memorial Bridge)'
+,'มุ่งหน้ามาปากคลองตลาด'
+,'Towards Pak Khlong Talat'
+,13.74018
+,100.49792
+,'10.101.102.199'
+],['235'
+,'ปากซอยจุฬาลงกรณ์ 26 ถนนบรรทัดทอง'
+,'Entrance to Soi Chulalongkorn 26 on Banthat Thong Road'
+,'รถมาจากแยกเจริญผล มุ่งหน้าไปแยกสะพานเหลือง'
+,'From Cha Roen Phon Intersection towards Saphan Lueang Intersection'
+,13.73915
+,100.52223
+,'10.107.129.123'
+],['236'
+,'ปากซอยจุฬาลงกรณ์ 26 ถนนบรรทัดทอง'
+,'Entrance to Soi Chulalongkorn 26 on Banthat Thong Road'
+,'รถมาจากแยกสะพานเหลือง มุ่งหน้าไปแยกเจริญผล'
+,'From Saphan Lueang Intersection towards Cha Roen Phon Intersection'
+,13.73904
+,100.52222
+,'10.107.129.124'
+],['229'
+,'ปากซอยระนอง2 ถนนพระราม 5'
+,'Entrance to Soi Ranong 2 on Rama 5 Road'
+,'รถมาจากแยกเกษะโกมล มุ่งหน้าไปแยกสะพานแดง'
+,'From Gesagomon Intersection towards Saphan Daeng Intersection'
+,13.78797
+,100.52693
+,'10.102.129.125'
+],['230'
+,'ปากซอยระนอง2 ถนนพระราม 5'
+,'Entrance to Soi Ranong 2 on Rama 5 Road'
+,'รถมาจากแยกสะพานแดง มุ่งหน้าไปแยกเกษะโกมล'
+,'From Saphan Daeng Intersection towards Gesagomon Intersection'
+,13.78793
+,100.52695
+,'10.102.129.126'
+],['11'
+,'ป้ายสัญญาณไฟ ใกล้ซอยราชวิถี 6 ถนนราชวิถี'
+,'Traffic Lights near Soi Rajavithi  6 on Rajavithi  Road'
+,'รถมาจากอนุเสาวรีย์ชัย'
+,'From Victory Monument'
+,13.76363
+,100.54136
+,'10.126.128.34'
+],['12'
+,'ป้ายสัญญาณไฟ ใกล้ซอยราชวิถี 6 ถนนราชวิถี'
+,'Traffic Lights near Soi Rajavithi  6 on Rajavithi  Road'
+,'รถมาจากแยกดินแดง'
+,'From Din Daeng Intersection'
+,13.76352
+,100.54129
+,'10.126.128.36'
+],['910'
+,'ผ่านพิภพลีลา'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.7574
+,100.49473
+,'10.156.102.10'
+],['629'
+,'แยกเกษะโกมล'
+,'Gesagomon Intersection'
+,''
+,''
+,13.78337
+,100.52435
+,'10.102.102.67'
+],['630'
+,'แยกเกษะโกมล'
+,'Gesagomon Intersection'
+,'รถมุ่งหน้าแยกสะพานแดง'
+,'Towards Saphan Daeng Intersection'
+,13.7834
+,100.52439
+,'10.102.102.68'
+],['631'
+,'แยกเกษะโกมล'
+,'Gesagomon Intersection'
+,'รถมุ่งหน้าแยกสะพานแดง'
+,'Towards Saphan Daeng Intersection'
+,13.78337
+,100.52439
+,'10.102.101.101'
+],['308'
+,'แยกขัตติยานี'
+,'Khattiyani Intersection'
+,'รถมุ่งหน้าแยกสวนรื่น'
+,'Towards Suan Ruenruedi Intersection'
+,13.77848
+,100.51634
+,'10.102.101.71'
+],['309'
+,'แยกขัตติยานี'
+,'Khattiyani Intersection'
+,'รถมุ่งหน้าแยกสุโขทัย'
+,'Towards Sukhothai Intersection'
+,13.77846
+,100.51639
+,'10.102.101.72'
+],['310'
+,'แยกขัตติยานี'
+,'Khattiyani Intersection'
+,'รถมุ่งหน้าแยกพิชัย'
+,'Towards Phi Chai Intersection'
+,13.7785
+,100.51637
+,'10.102.101.73'
+],['311'
+,'แยกขัตติยานี'
+,'Khattiyani Intersection'
+,'รถมุ่งหน้าแยกอู่ทองใน'
+,'Towards U Thong Nai Intersection'
+,13.77846
+,100.51635
+,'10.102.101.74'
+],['312'
+,'แยกขัตติยานี'
+,'Khattiyani Intersection'
+,'รถมาจากแยกสวนรื่น'
+,'Towards Suan Ruenruedi Intersection'
+,13.77848
+,100.51635
+,'10.102.102.50'
+],['313'
+,'แยกขัตติยานี'
+,'Khattiyani Intersection'
+,'รถมุ่งหน้า แยกพิชัย'
+,'Towards Phi Chai Intersection'
+,13.77849
+,100.51637
+,'10.102.102.52'
+],['363'
+,'แยกเขตดุสิต '
+,'Khatdusit Intersection'
+,'รถมาจากแยกราชวีถี'
+,'From Ratchawithi Intersection'
+,13.77667
+,100.52059
+,'10.102.102.73'
+],['364'
+,'แยกเขตดุสิต '
+,'Khatdusit Intersection'
+,'รถมาจากแยกราชวัตร'
+,'From Rat Cha Wat Intersection'
+,13.7765
+,100.5205
+,'10.102.102.76'
+],['589'
+,'แยกคลองสาน'
+,'Knongsan Intersection'
+,'รถมุ่งหน้าไปคลองสาน ถนนเจริญนคร'
+,''
+,13.73005
+,100.50872
+,'10.118.101.1'
+],['590'
+,'แยกคลองสาน'
+,'Knongsan Intersection'
+,'รถมาจากวงเวียนใหญ่'
+,''
+,13.73007
+,100.50867
+,'10.118.101.2'
+],['591'
+,'แยกคลองสาน'
+,'Knongsan Intersection'
+,'รถมาจากคลองสาน ถนนเจริญนคร'
+,''
+,13.72995
+,100.50863
+,'10.118.101.5'
+],['592'
+,'แยกคลองสาน'
+,'Knongsan Intersection'
+,'รถมุ่งหน้าไปถนนลาดหญ้า เข้าสำนักงานเขตคลองสาน'
+,''
+,13.73004
+,100.50856
+,'10.118.101.6'
+],['378'
+,'แยกคอกวัว'
+,'Khok Wua Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าอนุสาวรีย์ประชาธิปไตย'
+,'Towards Si Kak Sao Ching Cha Intersection'
+,13.75734
+,100.49893
+,'10.101.101.56'
+],['569'
+,'แยกจ.ป.ร.'
+,'Jor Por Ror  Intersection'
+,'ฝั่งขวารถมุ่งหน้าแยกมัฆวาน ฝั่งซ้ายรถมุ่งหน้าสะพานผ่านฟ้าลีลาศ'
+,'Towards Rama 8 Bridge'
+,13.75996
+,100.50763
+,'10.101.102.68'
+],['570'
+,'แยกจ.ป.ร.'
+,'Jor Por Ror  Intersection'
+,'ฝั่งขวารถมุ่งหน้าแยก จ.ป.ร ( ฝั่งซ้ายรถมุ่งหน้าสะพานพระราม 8)'
+,'Towards Phan Fa Lilat Intersection'
+,13.76011
+,100.50747
+,'10.101.102.69'
+],['571'
+,'แยกจ.ป.ร.'
+,'Jor Por Ror  Intersection'
+,'ฝั่งซ้ายรถมุ่งแยกมัฆวาน ฝั่งขวารถมุ่งหน้าสะพานผ่านฟ้าลีลาศ'
+,'Towards Lan Phra Rup Intersection'
+,13.76001
+,100.5077
+,'10.101.102.71'
+],['86'
+,'แยกจันทน์-นราธิวาส(เกาะกลางถนนนราธิวาส ข้างป้อมตำรวจ)'
+,'Central barrier near the police box on Narathiwas Road'
+,'รถมาจากแยกสาทร-นราธิวาส'
+,'From Sathon-Naradhiwas Intersection'
+,13.70731
+,100.53776
+,'10.128.128.27'
+],['87'
+,'แยกจันทน์-นราธิวาส(ถนนจันทน์ หน้า Besmile Dentral Clinic)'
+,'In front of Besmile Dentral Clinic on Chan Road'
+,'รถมาจากแยกรัชดา-นราธิวาส'
+,'From Ratchada-Naradhiwas Intersection'
+,13.70699
+,100.53751
+,'10.128.128.32'
+],['89'
+,'แยกจันทน์-สาธุประดิษฐ์'
+,'Chan-Sathu Pradit Intersection Intersection'
+,'รถมุ่งหน้าไปแยกใต้ทางด่วนจันทน์'
+,'Towards Intersection under Chan Expy'
+,13.70583
+,100.52883
+,'10.128.128.36'
+],['90'
+,'แยกจันทน์-สาธุประดิษฐ์'
+,'Chan-Sathu Pradit Intersection Intersection'
+,'รถมาจากแยกด่วนสาธุประดิษฐ์'
+,'From Duan Sathu Pradit Intersection'
+,13.70582
+,100.52868
+,'10.128.128.38'
+],['91'
+,'แยกจันทน์-สาธุประดิษฐ์'
+,'Chan-Sathu Pradit Intersection Intersection'
+,'รถมุ่งหน้าไปแยกด่วนสาธุประดิษฐ์'
+,'Towards Duan Sathu Pradit Intersection'
+,13.70586
+,100.52869
+,'10.128.128.40'
+],['908'
+,'แยกซังฮี้'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.77831
+,100.50849
+,'10.156.102.8'
+],['557'
+,'แยกซังฮี้'
+,'Sanghee Intersection'
+,'รถมุ่งหน้าไปแยกบางพลัด'
+,'Towards Bang Phlat Intersection'
+,13.77832
+,100.50853
+,'10.102.102.21'
+],['558'
+,'แยกซังฮี้'
+,'Sanghee Intersection'
+,''
+,''
+,13.77835
+,100.50863
+,'10.102.102.22'
+],['559'
+,'แยกซังฮี้'
+,'Sanghee Intersection'
+,'รถมุ่งหน้าไปแยกบางพลัด'
+,'Towards Bang Phlat Intersection'
+,13.77835
+,100.50843
+,'10.102.102.23'
+],['560'
+,'แยกซังฮี้'
+,'Sanghee Intersection'
+,''
+,''
+,13.77835
+,100.50851
+,'10.102.102.24'
+],['288'
+,'แยกซังฮี้'
+,'Sanghee Intersection'
+,'รถมุ่งหน้าแยกวชิระ'
+,'Towards Vajira Intersection'
+,13.77843
+,100.50846
+,'10.102.101.34'
+],['947'
+,'แยกตึกชัย'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.76921
+,100.52861
+,'10.156.102.47'
+],['480'
+,'แยกใต้ด่วนดินแดง'
+,'Intersection under Din Daeng Expy'
+,'รถมาจากแยกสุทธิสาร'
+,'From Sutthisan Intersection'
+,13.76417
+,100.54861
+,'10.126.101.4'
+],['95'
+,'แยกใต้ทางด่วนจันทน์(ถนนจันทน์ ใกล้คลินิกทันตกรรมสไมล์โฟกัส)'
+,'Intersection under Chan Expy Near Smile Focus Dental Clinic'
+,'รถมาจากแยกเจริญราษฎร์'
+,'From Charoen Rat Intersection'
+,13.70773
+,100.51856
+,'10.128.128.48'
+],['110'
+,'แยกเทียมร่วมมิตร(เกาะกลางถนนเทียมร่วมมิตร หน้าอาคาร Cyber World Tower)'
+,'Central barrier in front of Cyber World Tower on Thiam Ruam Mit Road'
+,'รถมาจากแยกห้วยขวาง'
+,'From Huai Khwang Intersection'
+,13.76951
+,100.5733
+,'10.117.128.22'
+],['111'
+,'แยกเทียมร่วมมิตร(เกาะกลางถนนเทียมร่วมมิตร หน้าอาคาร Cyber World Tower)'
+,'Central barrier in front of Cyber World Tower on Thiam Ruam Mit Road'
+,'รถมาจากแยกห้วยขวาง'
+,'From Huai Khwang Intersection'
+,13.76975
+,100.57295
+,'10.117.128.24'
+],['113'
+,'แยกเทียมร่วมมิตร(ถนนเทียมร่วมมิตร ข้างป้อมตำรวจ)'
+,'near the police box on Thiam Ruam Mit Road'
+,'รถมาจากแยกพระราม 9'
+,'From Rama 9 Intersection'
+,13.76951
+,100.57264
+,'10.117.128.28'
+],['565'
+,'แยกนครไชยศรี'
+,'Nakhon Chai Si Intersection'
+,'รถมาจากแยกสวรรคโลก'
+,'From Sawankhalok Intersection'
+,13.7761
+,100.52833
+,'10.102.102.106'
+],['566'
+,'แยกนครไชยศรี'
+,'Nakhon Chai Si Intersection'
+,'รถมาจากแยกสวรรคโลก'
+,'From Sawankhalok Intersection'
+,13.77617
+,100.52838
+,'10.102.102.105'
+],['567'
+,'แยกนครไชยศรี'
+,'Nakhon Chai Si Intersection'
+,'รถมาจากแยกสวรรคโลก'
+,'From Sawankhalok Intersection'
+,13.77605
+,100.52843
+,'10.102.102.107'
+],['568'
+,'แยกนครไชยศรี'
+,'Nakhon Chai Si Intersection'
+,'รถมาจากแยกเศรษฐศิริ'
+,'From Set Siri Intersection'
+,13.77616
+,100.52845
+,'10.102.102.108'
+],['950'
+,'แยกบรมราชชนนี'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.77332
+,100.48187
+,'10.156.102.50'
+],['934'
+,'แยกบางนา'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.67315
+,100.60673
+,'10.156.102.34'
+],['593'
+,'แยกบ้านแขก'
+,'Ban Khaek Juncion'
+,'รถมุ่งหน้าไปวงเวียนใหญ่'
+,''
+,13.73064
+,100.49475
+,'10.118.101.8'
+],['594'
+,'แยกบ้านแขก'
+,'Ban Khaek Juncion'
+,'ถนนประชาธิปก,  รถมาจากสะพานพระปกเกล้า/วงเวียนเล็ก'
+,'Prachathipoke Road, From Saphan PhraPokKlao / WongWian Lek'
+,13.73107
+,100.49486
+,'10.118.101.9'
+],['595'
+,'แยกบ้านแขก'
+,'Ban Khaek Juncion'
+,'ถนนอิสรภาพ รถมาจากแยกโพธิ์สามต้น'
+,'IsaraPhap Road, From PhoSamTon Intersection'
+,13.73115
+,100.49423
+,'10.118.101.10'
+],['596'
+,'แยกบ้านแขก'
+,'Ban Khaek Juncion'
+,'รถมุ่งหน้าไปแยกโพธฺ์สามต้น'
+,''
+,13.73083
+,100.49465
+,'10.118.101.11'
+],['26'
+,'แยกบุคคโล(ถนนมไหสวรรค์ขาเข้า ใกล้เป้าเล้งเภสัช)'
+,'Near Pao Leng Pharmacy on Mahai Sawan Road (Inbound)'
+,'รถมาจากถนนราษฎร์บูรณะ'
+,'From Rat Burana Road'
+,13.70293
+,100.48839
+,'10.116.128.22'
+],['27'
+,'แยกบุคคโล(ถนนมไหสวรรค์ขาเข้า ใกล้เป้าเล้งเภสัช)'
+,'Near Pao Leng Pharmacy on Mahai Sawan Road (Inbound)'
+,'รถมาจากสะพานกรุงเทพ'
+,'From Krung Thep Bridge'
+,13.7029
+,100.48851
+,'10.116.128.24'
+],['28'
+,'แยกบุคคโล(ถนนมไหสวรรค์ขาเข้า ข้างป้อมตำรวจ)'
+,'Near the police box on Mahai Sawan Road (Inbound)'
+,'รถมาจากแยกมไหสวรรค์'
+,'From Mahai Sawan Intersection'
+,13.70326
+,100.48846
+,'10.116.128.26'
+],['29'
+,'แยกบุคคโล(ถนนมไหสวรรค์ขาเข้า ข้างป้อมตำรวจ)'
+,'Near the police box on Mahai Sawan Road (Inbound)'
+,'รถมาจากถนนเจริญนคร'
+,'From Charoen Nakhon Road'
+,13.70319
+,100.48864
+,'10.116.128.28'
+],['944'
+,'แยกปทุมวัน'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.74582
+,100.53137
+,'10.156.102.44'
+],['432'
+,'แยกปทุมวัน'
+,'Pathum Wan  Intersection'
+,'รถมาจากแยกราชเทวี'
+,'From Ratchathewi Intersection'
+,13.74624
+,100.53083
+,'10.107.102.39'
+],['928'
+,'แยกประดิพัทธ'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.79192
+,100.53783
+,'10.156.102.28'
+],['942'
+,'แยกประตูน้ำ'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.7501
+,100.54083
+,'10.156.102.42'
+],['907'
+,'แยกพระรูป ร.5'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.76802
+,100.51143
+,'10.156.102.7'
+],['52'
+,'แยกพหลโยธิน 2(ถนนพหลโยธินขาเข้า ใกล้ บ.ไทยเบปเวอร์เรจ จำกัด)'
+,'Near Thaibeverage Recycle Co.,LTD.  on  Phahon Yothin Road (Inbound)'
+,'รถมาจากถนนวิภาวดีรังสิต'
+,'From Vibhavadi Rangsit Road'
+,13.77558
+,100.54324
+,'10.114.128.22'
+],['54'
+,'แยกพหลโยธิน 2(ถนนพหลโยธินขาออก ใกล้ บ.กิฟฟารีน จำกัด)'
+,'Near Giffarine Skyline Unity Co.,LTD.   on  Phahon Yothin Road (outbound)'
+,'รถมุ่งหน้าไปแยกสะพานควาย'
+,'Towards Saphan Khwai Intersection'
+,13.77564
+,100.54307
+,'10.114.128.26'
+],['932'
+,'แยกพัฒนาการ'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.7356
+,100.64105
+,'10.156.102.32'
+],['632'
+,'แยกพิชัย'
+,'Phi Chai Intersection'
+,'รถมาจากแยกอำนวยสงคราม-ร่วมจิต'
+,'From Amnuay Songkhram-Ruam Chit Intersection'
+,13.78193
+,100.51806
+,'10.102.102.149'
+],['939'
+,'แยกมหาดไทย'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.76043
+,100.6246
+,'10.156.102.39'
+],['406'
+,'แยกมัฆวาน'
+,'Makkhawan  Intersection'
+,'รถมุ่งหน้าแยกมิสกวัน'
+,'Towards Suan Mitsakawan Intersectioin'
+,13.76376
+,100.50945
+,'10.101.102.61'
+],['549'
+,'แยกยมราช'
+,'Yommarat Intersection'
+,'รถมาจากแยกนางเลิ้ง'
+,'From Nang Loeng Intersection'
+,13.75743
+,100.52056
+,'10.102.102.121'
+],['550'
+,'แยกยมราช'
+,'Yommarat Intersection'
+,''
+,''
+,13.75709
+,100.52063
+,'10.102.102.122'
+],['551'
+,'แยกยมราช'
+,'Yommarat Intersection'
+,'รถมุ่งหน้าไปแยกอุรุพงษ์'
+,'Towards Uruphong Intersection'
+,13.75736
+,100.52065
+,'10.102.102.123'
+],['552'
+,'แยกยมราช'
+,'Yommarat Intersection'
+,'ฝั่งซ้ายรถมุ่งหน้าไปแยกอุรุพงษ์เลี้ยวขวาถนนหลานหลวง ฝั่งขวารถมุ่งหน้าแยกนางเลิ้ง'
+,'Towards Lan Luang Intersection'
+,13.75724
+,100.52051
+,'10.102.102.124'
+],['360'
+,'แยกยมราช'
+,'Yommarat Intersection'
+,'รถมาจากแยกเสาวนี'
+,'From Saowa Ni Intersection'
+,13.75741
+,100.52061
+,'10.102.101.176'
+],['74'
+,'แยกรัชดา-นราธิวาส(เกาะกลางถนนนราธิวาส )'
+,'Central barrier on Narathiwas Road'
+,'รถมาจากแยกจันทน์-นราธิวาส'
+,'From Chan-Naradhiwas Intersection'
+,13.70113
+,100.5415
+,'10.112.128.24'
+],['75'
+,'แยกรัชดา-นราธิวาส(ถนนนราธิวาส ใต้สะพานข้ามทางแยก)'
+,'Under the overpass on Narathiwas Road'
+,'รถมาจากแยกด่วนสาธุประดิษฐ์'
+,'From Duan Sathu Pradit Intersection'
+,13.70018
+,100.54161
+,'10.112.128.26'
+],['76'
+,'แยกรัชดา-นราธิวาส(ถนนนราธิวาส ใต้สะพานข้ามทางแยก)'
+,'Under the overpass on Narathiwas Road'
+,'รถมาจากแยกพระรามที่ 3-นราธิวาส'
+,'From Rama 3-Naradhiwas Intersection'
+,13.70061
+,100.5413
+,'10.112.128.28'
+],['34'
+,'แยกรัชดา-ราชพฤกษ์(ถนนราชพฤกษ์ ข้างป้อมตำรวจ ฝั่งสถานี BRT ราชพฤกษ์)'
+,'Near the police box and BRT Ratchapruek Station on Ratchapruek Road'
+,'รถมาจากแยกวุฒากาศ'
+,'From Wutthakat Intersection'
+,13.71543
+,100.47811
+,'10.116.128.38'
+],['35'
+,'แยกรัชดา-ราชพฤกษ์(ถนนราชพฤกษ์ ข้างป้อมตำรวจ ฝั่งสถานี BRT ราชพฤกษ์)'
+,'Near the police box and BRT Ratchapruek Station on Ratchapruek Road'
+,'รถมาจากแยกท่าพระ'
+,'From Tha Phra Intersection'
+,13.7157
+,100.47828
+,'10.116.128.40'
+],['37'
+,'แยกรัชดา-ราชพฤกษ์(ถนนราชพฤกษ์ ข้างป้อมตำรวจ ฝั่งสถานี BTS ตลาดพลู)'
+,'Near the police box and BRT Ratchapruek Station on Ratchapruek Road'
+,'รถมาจากแยกตากสิน'
+,'From Taksin Intersection'
+,13.71563
+,100.47852
+,'10.116.128.44'
+],['126'
+,'แยกรัชดา-ลาดพร้าว(ถนนลาดพร้าว ใกล้ซอยลาดพร้าว 30)'
+,'Near Soi Lat Phrao 30 on Lat Phrao Road'
+,'รถมาจากแยกรัชโยธิน มุ่งหน้าไปแยกรัชดาลาดพร้าว'
+,'From Ratchayothin Intersection towards Ratchada-Lat Phrao Intersection'
+,13.81003
+,100.57528
+,'10.117.128.46'
+],['3'
+,'แยกรัชโยธิน(เกาะกลางถนนรัชดาภิเษก หน้า สน.พหลโยธิน)'
+,'Central barrier near Police station on Ratchadapisek Road'
+,'รถมาจากแยกรัชดา-ลาดพร้าว'
+,'From Ratchada-Lat Phrao Intersection'
+,13.82682
+,100.56822
+,'10.130.128.22'
+],['943'
+,'แยกราชประสงค์'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.74454
+,100.54025
+,'10.156.102.43'
+],['561'
+,'แยกราชวิถี'
+,'Ratchawithi Intersection'
+,'รถมุ่งหน้าแยกสุโขทัย(ตามลูกศรสีเหลือง)'
+,'Towards Sukhothai Intersection'
+,13.77348
+,100.51902
+,'10.102.102.79'
+],['562'
+,'แยกราชวิถี'
+,'Ratchawithi Intersection'
+,'รถมุ่งหน้าไปแยกสุโขทัย'
+,'Towards Sukhothai Intersection'
+,13.7735
+,100.51933
+,'10.102.102.77'
+],['545'
+,'แยกลานพระรูป ร. 5'
+,'Lan Phra Rup Intersection'
+,''
+,''
+,13.76819
+,100.51156
+,'10.102.102.57'
+],['546'
+,'แยกลานพระรูป ร. 5'
+,'Lan Phra Rup Intersection'
+,''
+,''
+,13.76814
+,100.51142
+,'10.102.102.58'
+],['547'
+,'แยกลานพระรูป ร. 5'
+,'Lan Phra Rup Intersection'
+,'รถมาจากแยกอู่ทองใน'
+,'From U Thong Nai Intersection'
+,13.76836
+,100.51152
+,'10.102.102.59'
+],['931'
+,'แยกลำสาลี'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.76289
+,100.64546
+,'10.156.102.31'
+],['553'
+,'แยกวชิระ'
+,'Vajira Intersection'
+,'ถนนสุโขทัย รถมาจากสวนรื่นฤดี (ตามลูกศร)'
+,'SukhoThai Road, From Suan Ruenruedi (See Arrow)'
+,13.78131
+,100.50985
+,'10.102.102.13'
+],['555'
+,'แยกวชิระ'
+,'Vajira Intersection'
+,'ถนนสุโขทัย รถมาจากแยกสวนรื่นฤดี (ตามลูกศร)'
+,'Sukhothai Road From Suan Ruenruedi Intersection (See Arrow)'
+,13.78125
+,100.51
+,'10.102.102.14'
+],['305'
+,'แยกวังแดง'
+,'Wang Daeng Intersection'
+,'ถนนนครราชสีมา รถฝั่งซ้ายมุ่งหน้าแยกพล1 (ถ.นครราชสีมาตัดถ.ศรีอยุธยา)'
+,'Towards Pon 1 Intersection'
+,13.76848
+,100.50764
+,'10.102.101.67'
+],['306'
+,'แยกวังแดง'
+,'Wang Daeng Intersection, Phitsanulok Road,'
+,'แยกวังแดง ถนนพิษณุโลก รถฝั่งซ้ายมุ่งหน้าเทเวศน์ ถนนสามเสน'
+,'Wang Daeng Intersection, Phitsanulok Road, Left side towards Thewate, Samsane Road'
+,13.76845
+,100.50756
+,'10.102.101.68'
+],['307'
+,'แยกวังแดง'
+,'Wang Daeng Intersection'
+,'รถฝั่งขวามาจากแยกประชาเกษม'
+,'Right side from Pracha Kasem Intersection'
+,13.76827
+,100.5076
+,'10.102.101.69'
+],['637'
+,'แยกวังแดง'
+,'Wang Daeng Intersection'
+,'รถฝั่งซ้าย มาจากเทเวศน์ถนนสามเสน (ตามลูกศร)'
+,'Left Side From TheWate Junction, Samsane Road (See Arrow)'
+,13.76845
+,100.50761
+,'10.102.102.46'
+],['638'
+,'แยกวังแดง'
+,'Wang Daeng Intersection'
+,'รถมุ่งหน้าแยก พล 1'
+,'Towards Pon 1 Intersection'
+,13.76835
+,100.50759
+,'10.102.102.47'
+],['639'
+,'แยกวังแดง'
+,'Wang Daeng Intersection'
+,'แยกวังแดง ถนนนครราชสีมา รถมาจากแยกประชาเกษม (ตามลูกศร)'
+,'Yak WangDaeng NakhonRatchaSima Road, From Pracha Kasem Intersection (See Arrow)'
+,13.76836
+,100.50757
+,'10.102.102.48'
+],['344'
+,'แยกวัดเบญจฯ'
+,'Wat Benchamabophit Intersection'
+,'ฝั่งซ้ายรถมุ่งหน้าแยกเสาวนี ฝั่งขวารถมุ่งหน้าแยกลานพระรูป'
+,'From Si Ayutthaya Intersection'
+,13.76664
+,100.51532
+,'10.102.101.129'
+],['346'
+,'แยกวัดเบญจฯ'
+,'Wat Benchamabophit Intersection'
+,'รถมาจากแยกเสาวนี'
+,'Right side from Saowanee Intersection'
+,13.7665
+,100.51524
+,'10.102.102.83'
+],['386'
+,'แยกวิสุทธิกษัตริย์'
+,'Wisutkasat Intersection'
+,'รถมาจากแยกบางขุนพรหม1'
+,'From Bangkhunprom Intersection'
+,13.76253
+,100.50431
+,'10.101.101.74'
+],['389'
+,'แยกวิสุทธิกษัตริย์'
+,'Wisutkasat Intersection'
+,'รถมุ่งหน้าแยกเฉลิมวันชาติ'
+,'Towards Chalermwanchat Intersection'
+,13.76238
+,100.50424
+,'10.101.101.79'
+],['21'
+,'แยกศรีย่าน'
+,'Si Yan Intersection'
+,'รถมุ่งหน้าไปแยกบางกระบือ'
+,'Towards Bang Krabue Intersection'
+,13.78532
+,100.51162
+,'10.102.128.42'
+],['22'
+,'แยกศรีย่าน'
+,'Si Yan Intersection'
+,'รถมุ่งหน้าไปแยกร่วมจิตร'
+,'Towards Ruam Chit Intersection'
+,13.78531
+,100.51168
+,'10.102.128.44'
+],['23'
+,'แยกศรีย่าน'
+,'Si Yan Intersection'
+,'รถมุ่งหน้าไปแยกวชิระ'
+,'Towards Vajira Intersection'
+,13.78522
+,100.5117
+,'10.102.128.46'
+],['24'
+,'แยกศรีย่าน'
+,'Si Yan Intersection'
+,'รถมุ่งหน้าไปแม่น้ำเจ้าพระยา'
+,'Towards Chao Phraya River'
+,13.78525
+,100.51182
+,'10.102.128.48'
+],['953'
+,'แยกศาลาแดง'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.72917
+,100.53628
+,'10.156.102.53'
+],['349'
+,'แยกเศรษฐศิริ'
+,'Setsiri Intersection'
+,'รถมุ่งหน้าแยกเกษะโกมล'
+,'Towards Gesagomon Intersection'
+,13.7815
+,100.53089
+,'10.102.101.148'
+],['350'
+,'แยกเศรษฐศิริ'
+,'Setsiri Intersection'
+,'รถมาจากแยกเกษะโกมล'
+,'From Keshakomala Intersection'
+,13.78161
+,100.53048
+,'10.102.101.150'
+],['351'
+,'แยกเศรษฐศิริ'
+,'Setsiri Intersection'
+,'รถมุ่งหน้าแยกสามเสน'
+,'Towards Sam Sen Intersection'
+,13.78155
+,100.53054
+,'10.102.101.151'
+],['323'
+,'แยกสวนมิสกวัน'
+,'Suan Mitsakawan Intersection'
+,'รถมาจากแยกมัฆวาน'
+,'From Makkhawan  Intersection'
+,13.76588
+,100.51043
+,'10.102.101.91'
+],['324'
+,'แยกสวนมิสกวัน'
+,'Suan Mitsakawan Intersection'
+,'รถมุ่งหน้าฝั่งซ้ายแยกวังแดง'
+,'Left side towards Wang Daeng Intersection'
+,13.76593
+,100.51041
+,'10.102.101.94'
+],['325'
+,'แยกสวนมิสกวัน'
+,'Suan Mitsakawan Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าแยกมัฆวาน'
+,'Left side towards Makkhawan  Intersection'
+,13.76585
+,100.51049
+,'10.102.101.97'
+],['326'
+,'แยกสวนมิสกวัน'
+,'Suan Mitsakawan Intersection'
+,'รถมุ่งหน้า แยกลานพระรูป'
+,'Towards Lan Phra Rup Intersection'
+,13.76588
+,100.51043
+,'10.102.102.63'
+],['933'
+,'แยกสวนหลวง'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.71274
+,100.64366
+,'10.156.102.33'
+],['356'
+,'แยกสวรรคโลก'
+,'Sawankhalok Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าถนนพระรามที่ 5'
+,'Left side towards Rama V Road'
+,13.77424
+,100.52738
+,'10.102.101.159'
+],['358'
+,'แยกสวรรคโลก'
+,'Sawankhalok Intersection'
+,'รถมาจากแยกนครไชยศรี'
+,'From Nakhon Chai Si Intersection'
+,13.77363
+,100.52721
+,'10.102.102.112'
+],['58'
+,'แยกสะพานควาย(ถนนพหลโยธินขาเข้า ใกล้ตู้ควบคุมการจราจร)'
+,'Near traffic control box on Paholyothin  Road(Inbound)'
+,'รถมาจากอนุสาวรีย์ชัยสมรภูมิ'
+,'From Victory Monument'
+,13.78957
+,100.54812
+,'10.114.128.34'
+],['59'
+,'แยกสะพานควาย(ถนนพหลโยธินขาเข้า ใกล้ตู้ควบคุมการจราจร)'
+,'Near traffic control box on Paholyothin  Road(Inbound)'
+,'รถมาจากแยกสุทธิสาร'
+,'From Sutthisan Intersection'
+,13.78968
+,100.54842
+,'10.114.128.36'
+],['56'
+,'แยกสะพานควาย(ถนนพหลโยธินขาออก ใกล้อาคารศรีศุภราช อาเขต)'
+,'Near Sri Suparach Arcade Building  on Paholyothin Road (outbound)'
+,'รถมาจากแยกประดิพัทธ์'
+,'From Kamphaeng Phet Intersection'
+,13.78985
+,100.54817
+,'10.114.128.30'
+],['17'
+,'แยกสะพานแดง'
+,'Saphan Daeng Intersection'
+,'รถมุ่งหน้าไปแยกเกษะโกมล'
+,'Towards Gesagomon Intersection'
+,13.79328
+,100.52987
+,'10.102.128.34'
+],['19'
+,'แยกสะพานแดง'
+,'Saphan Daeng Intersection'
+,'รถมุ่งหน้าไปแยกเตาปูน'
+,'Towards Tao Pun Intersection'
+,13.79351
+,100.52999
+,'10.102.128.38'
+],['20'
+,'แยกสะพานแดง'
+,'Saphan Daeng Intersection'
+,'รถมาจากแยกเกียกกาย'
+,'From Keakkai Intersection'
+,13.7935
+,100.53002
+,'10.102.128.40'
+],['40'
+,'แยกสะพานเหลือง(ถนนพระรามที่ 4 ขาออก)'
+,'Rama 4 Road (outbound)'
+,'รถมาจากถนนบรรทัดทอง'
+,'From Rama 7 Bridge'
+,13.73588
+,100.52171
+,'10.107.128.22'
+],['41'
+,'แยกสะพานเหลือง(ถนนพระรามที่ 4 ขาออก)'
+,'Rama 4 Road (outbound)'
+,'รถมาจากแยกสามย่าน'
+,'From Sam Yan Intersection'
+,13.7356
+,100.52164
+,'10.107.128.24'
+],['952'
+,'แยกสามย่าน'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.73248
+,100.52983
+,'10.156.102.52'
+],['352'
+,'แยกสามเสน'
+,'Nakhon Chai Si Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าแยกเศรษฐศิริ'
+,'Left side towards Vichaiyut Intersection'
+,13.77643
+,100.52848
+,'10.102.101.154'
+],['353'
+,'แยกสามเสน'
+,'Nakhon Chai Si Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าแยกสวรรคโลก'
+,'Left side towards Uphai Chetsaduthit Intersection'
+,13.77619
+,100.52839
+,'10.102.101.155'
+],['355'
+,'แยกสามเสน'
+,'Nakhon Chai Si Intersection'
+,'ฝั่งซ้ายรถมุ่งหน้าแยกโรงกรองน้ำ'
+,'Towards Rong Krong Nam Intersection'
+,13.77593
+,100.52897
+,'10.102.101.157'
+],['292'
+,'แยกสี่เสาเทเวศน์ '
+,'Sisaothewet Intersection'
+,'รถมุ่งหน้ามหาวิทยาลัยเทคโนโลยีราชมงคลวิทยาเขตโชติเวช'
+,'Towards Rajamangala University of Technology (Chotiwet Campus)'
+,13.77121
+,100.50488
+,'10.102.101.41'
+],['293'
+,'แยกสี่เสาเทเวศน์'
+,'Sisaothewet Intersection'
+,'รถมุ่งหน้าแยกเทเวศน์'
+,'Towards Thewet Intersection'
+,13.77071
+,100.50468
+,'10.102.101.43'
+],['334'
+,'แยกสุโขทัย'
+,'Khatdusit Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าแยกราชวัตร ฝั่งขวารถมุ่งหน้าแยกราชวิถีเลี้ยวซ้ายแยกสวรรคโลก'
+,'Left side towards Ratchawithi Intersection'
+,13.77663
+,100.52079
+,'10.102.101.107'
+],['335'
+,'แยกสุโขทัย'
+,'Khatdusit Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าแยกขัตติยานี'
+,'Left side towards Sawankhalok Intersection'
+,13.77652
+,100.52068
+,'10.102.101.108'
+],['336'
+,'แยกสุโขทัย'
+,'Khatdusit Intersection'
+,'รถมุ่งหน้าแยกสวรรคโลก เลี้ยวซ้ายแยกราชวัตร'
+,'Towards Khattiyani Intersection'
+,13.77658
+,100.52062
+,'10.102.101.109'
+],['338'
+,'แยกสุโขทัย'
+,'Khatdusit Intersection'
+,'ฝั่งขวารถมาจากแยกขัตติยานี ฝั่งซ้ายรถมุ่งหน้าแยกขัตติยานี'
+,'From Khattiyani Intersection'
+,13.77656
+,100.52061
+,'10.102.101.112'
+],['7'
+,'แยกสุทธิสาร(เกาะกลางถนนวิภาวดีรังสิต ข้างป้อมตำรวจ)'
+,'Central barrier near the police box on Vibhavadi Rangsit Road'
+,'รถมาจากแยกสะพานควาย'
+,'From Saphan Khwai Intersection'
+,13.7893
+,100.5611
+,'10.126.128.26'
+],['8'
+,'แยกสุทธิสาร(เกาะกลางถนนวิภาวดีรังสิต ข้างป้อมตำรวจ)'
+,'Central barrier near the police box on Vibhavadi Rangsit Road'
+,'รถมาจากดินแดง'
+,'From Din Daeng'
+,13.78921
+,100.56119
+,'10.126.128.28'
+],['9'
+,'แยกสุทธิสาร(ถนนวิภาวดีรังสิต ขาเข้า)'
+,'Vibhavadi Rangsit Road (Inbound)'
+,'รถมาจากแยกลาดพร้าวมุ่งหน้าไปแยกใต้ด่วนดินแดง'
+,'From Don Mueang'
+,13.78936
+,100.56188
+,'10.126.128.30'
+],['10'
+,'แยกสุทธิสาร(ถนนวิภาวดีรังสิต ขาเข้า)'
+,'Vibhavadi Rangsit Road (Inbound)'
+,'รถมาจากแยกรัชดา-สุทธิสาร'
+,'From Ratchada-Sutthisan Intersection'
+,13.78927
+,100.56191
+,'10.126.128.32'
+],['395'
+,'แยกเสาชิงช้า'
+,'Sao Chingcha Intersection'
+,'รถมาจากวัดสุทัศน์ ถ.อุณากรรณ มุ่งหน้าตัดถ.บำรุงเมือง'
+,'From SiriPhong Road towards Bamrung Mueang Road'
+,13.7517
+,100.50174
+,'10.101.101.106'
+],['114'
+,'แยกห้วยขวาง'
+,'Huai Khwang Intersection'
+,'รถมาจากถนนประชาราษฎร์บำเพ็ญ'
+,'From Pracha Rat Bamphen Road'
+,13.77848
+,100.5738
+,'10.117.128.50'
+],['115'
+,'แยกห้วยขวาง'
+,'Huai Khwang Intersection'
+,'รถมาจากแยกรัชดา-สุทธิสาร'
+,'From Ratchada-Sutthisan Intersection'
+,13.77856
+,100.57374
+,'10.117.128.52'
+],['116'
+,'แยกห้วยขวาง'
+,'Huai Khwang Intersection'
+,'รถมาจากแยกเทียมร่วมมิตร'
+,'From Thiam Ruam Mit Intersection'
+,13.77842
+,100.57347
+,'10.117.128.54'
+],['117'
+,'แยกห้วยขวาง'
+,'Huai Khwang Intersection'
+,'รถมาจากถนนประชาสงเคราะห์'
+,'From Pracha Songkhro Road'
+,13.77836
+,100.57353
+,'10.117.128.56'
+],['46'
+,'แยกอุรุพงษ์(ถนนเพชรบุรี ขาออก)'
+,'Phetchaburi Road (outbound)'
+,'รถมาจากแยกยมราช'
+,'From Yommarat Intersection'
+,13.75632
+,100.52324
+,'10.107.128.42'
+],['302'
+,'แยกอู่ทองนอก'
+,'Aoo Tong Nok Intersection'
+,'รถฝั่งซ้ายมุ่งหน้าถ.สามเสน (ท่าวาสุกรี) '
+,'Left side towards Sam Sen Road  (Tha Vasukri)'
+,13.77211
+,100.5093
+,'10.102.101.54'
+],['314'
+,'แยกอู่ทองใน'
+,'U Thong Nai Intersection'
+,'รถมุ่งหน้าแยกราชวิถี'
+,'Towards Ratchawithi Intersection'
+,13.77542
+,100.51495
+,'10.102.101.76'
+],['315'
+,'แยกอู่ทองใน'
+,'U Thong Nai Intersection'
+,'รถมุ่งหน้าแยกการเรือน'
+,'Towards Kanruen Intersection'
+,13.77547
+,100.51483
+,'10.102.102.53'
+],['318'
+,'แยกอู่ทองใน'
+,'U Thong Nai Intersection'
+,'รถมุ่งหน้าแยกการเรือน'
+,'Towards Kanruen Intersection'
+,13.77549
+,100.5148
+,'10.102.102.55'
+],['319'
+,'แยกอู่ทองใน'
+,'U Thong Nai Intersection'
+,'รถมุ่งหน้าแยกราชวิถี 2'
+,'Towards Ratchawithi Intersection'
+,13.77541
+,100.515
+,'10.102.102.55'
+],['954'
+,'รัชดา-พระราม 4'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.72068
+,100.55805
+,'10.156.102.54'
+],['938'
+,'รามคำแหง-พระราม 9'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.74771
+,100.60329
+,'10.156.102.38'
+],['920'
+,'วงเวียนหลักสี่'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.87539
+,100.59653
+,'10.156.102.20'
+],['204'
+,'สถานีรถไฟฟ้าช่องนนทรี ถนนนราธิวาส'
+,'Chong Non Si BTS Station  on Naradhiwas Road'
+,'รถมาจากถนนสีลม-นราธิวาส มุ่งหน้าไปแยกสาทร-นราธิวาส'
+,'From Silom-Naradhiwas Intersection towards Sathon-Naradhiwas Intersection'
+,13.72419
+,100.52936
+,'10.128.129.123'
+],['205'
+,'สถานีรถไฟฟ้าช่องนนทรี ถนนนราธิวาส'
+,'Chong Non Si BTS Station  on Naradhiwas Road'
+,'รถมาจากแยกสาทร-นราธิวาส มุ่งหน้าไปแยกสีลม-นราธิวาส'
+,'From Sathon-Naradhiwas Intersection towards Silom-Naradhiwas Intersection'
+,13.72401
+,100.52893
+,'10.128.129.124'
+],['965'
+,'สะพานพระราม 8'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.76781
+,100.49971
+,'10.156.102.65'
+],['146'
+,'สะพานลอยใกล้ มหาวิทยาลัยหอการค้าไทย ปากซอยวิภาวดีรังสิต 2 ถนนวิภาวดีรังสิต'
+,'UTCC footbridge near the entrance to Vibhavadi-Rangsit 2 on Vibhavadi-Rangsit Road'
+,'รถมาจากแยกสุทธิสาร มุ่งหน้าไปแยกใต้ทางด่วนดินแดง'
+,'From Intersection under Din Daeng Expy towards Sutthisan Intersection'
+,13.77942
+,100.5569
+,'10.126.129.125'
+],['147'
+,'สะพานลอยใกล้ มหาวิทยาลัยหอการค้าไทย ปากซอยวิภาวดีรังสิต 2 ถนนวิภาวดีรังสิต'
+,'UTCC footbridge near the entrance to Vibhavadi-Rangsit 2 on Vibhavadi-Rangsit Road'
+,'รถมาจากใต้ด่วนดินแดง มุ่งหน้าไปแยกสุทธิสาร'
+,'From Sutthisan Intersection towards Intersection under Din Daeng Expy'
+,13.77947
+,100.55642
+,'10.126.129.126'
+],['148'
+,'สะพานลอยใกล้ โรงผลิตน้ำสามเสน ถนนพระราม 6'
+,'Footbridge near Samsean Waterwork Power Plant on Rama 6 Road'
+,'รถมาจากแยกตึกชัย มุ่งหน้าไปแยกโรงกรองน้ำ'
+,'From Tuek Chai Intersection towards Rong Krong Nam Intersection'
+,13.77367
+,100.53052
+,'10.102.129.121'
+],['149'
+,'สะพานลอยใกล้ โรงผลิตน้ำสามเสน ถนนพระราม 6'
+,'Footbridge near Samsean Waterwork Power Plant on Rama 6 Road'
+,'รถมาจากแยกโรงกรองน้ำ มุ่งหน้าไปแยกตึกชัย'
+,'From Rong Krong Nam Intersection towards Tuek Chai Intersection'
+,13.77368
+,100.53056
+,'10.102.129.122'
+],['144'
+,'สะพานลอยใกล้ โรงพยาบาลทหารผ่านศึก ถนนวิภาวดีรังสิต'
+,'Footbridge near Veterans Hospital on Vibhavadi Rangsit Road'
+,'รถมาจากแยกใต้ทางด่วนดินแดง มุ่งหน้าไปแยกสุทธิสาร'
+,'From Dindaeng Under ExpressWay towards SutthiSan Intersection'
+,13.77086
+,100.55156
+,'10.126.129.123'
+],['145'
+,'สะพานลอยใกล้ โรงพยาบาลทหารผ่านศึก ถนนวิภาวดีรังสิต'
+,'Footbridge near Veterans Hospital on Vibhavadi Rangsit Road'
+,'รถมาจากแยกสุทธิสาร มุ่งหน้าไปแยกใต้ทางด่วนดินแดง'
+,'From Sutthisan Intersection towards Intersection under Din Daeng  ExpressWay'
+,13.77084
+,100.55207
+,'10.126.129.124'
+],['150'
+,'สะพานลอยใกล้ โรงเรียนสามเสนวิทยาลัย ถนนพระราม 6'
+,'Footbridge near Samsenwittayalai School on Rama 6 Road'
+,'รถมาจากแยกอารีย์สัมพันธ์ มุ่งหน้าไปแยกประดิพัทธ์'
+,'From Ari Samphan Intersection towards Pradiphat Intersection'
+,13.78381
+,100.5346
+,'10.102.129.123'
+],['151'
+,'สะพานลอยใกล้ โรงเรียนสามเสนวิทยาลัย ถนนพระราม 6'
+,'Footbridge near Samsenwittayalai School on Rama 6 Road'
+,'รถมาจากแยกประดิพัทธ์ มุ่งหน้าไปแยกอารีย์สัมพันธ์'
+,'From Pradiphat Intersection towards Ari Samphan Intersection'
+,13.7838
+,100.53462
+,'10.102.129.124'
+],['164'
+,'สะพานลอยใกล้ซอยจรัญสนิทวงศ์ 75 ถนนจรัญสนิทวงศ์'
+,'Footbridge near Soi Charan SanitFootbridge near Soi Charan Sanit Wong 75 on Charan Sanit Wong Road'
+,'รถมาจากสะพานพระราม 7 มุ่งหน้าไปแยกบางพลัด'
+,'From Rama 7 Bridge towards Bang Phlat Intersection'
+,13.78833
+,100.50071
+,'10.125.129.121'
+],['165'
+,'สะพานลอยใกล้ซอยจรัญสนิทวงศ์ 75 ถนนจรัญสนิทวงศ์'
+,'Footbridge near Soi Charan Sanit Wong 75 on Charan Sanit Wong Road'
+,'รถมาจากแยกบางพลัด มุ่งหน้าไปสะพานพระราม 7'
+,'From Bang Phlat Intersection towards Rama 7 Bridge'
+,13.78844
+,100.50054
+,'10.125.129.122'
+],['156'
+,'สะพานลอยใกล้ซอยเจริญนคร 46 ถนนเจริญนคร'
+,'Footbridge near Soi Charoen Nakhon 46 on Charoen Nakhon Road'
+,'รถมาจากแยกบุคคโล มุ่งหน้าไปแยกเจริญนครใต้'
+,'From Buk Ka Lo Intersection towards Charoen Nakhon Charoen Na Khon Tai Intersection'
+,13.70976
+,100.49642
+,'10.116.129.121'
+],['157'
+,'สะพานลอยใกล้ซอยเจริญนคร 46 ถนนเจริญนคร'
+,'Footbridge near Soi Charoen Nakhon 46 on Charoen Nakhon Road'
+,'รถมาจากแยกเจริญนครใต้ มุ่งหน้าไปแยกบุคคโล'
+,'From Charoen Nakhon Tai Intersection towards Buk Ka Lo Intersection'
+,13.70976
+,100.49656
+,'10.116.129.122'
+],['160'
+,'สะพานลอยใกล้ซอยเทอดไท 21 ถนนราชพฤกษ์'
+,'Footbridge near Soi Thoet Thai 21 on Ratchaphruek Road'
+,'รถมาจากแยกตากสิน มุ่งหน้าไปแยกรัชดา-ราชพฤกษ์'
+,'From Taksin Intersection towards Ratchada-Ratchaphruek Intersection'
+,13.71838
+,100.48378
+,'10.116.129.125'
+],['161'
+,'สะพานลอยใกล้ซอยเทอดไท 21 ถนนราชพฤกษ์'
+,'Footbridge near Soi Thoet Thai 21 on Ratchaphruek Road'
+,'รถมาจากแยกรัชดา-ราชพฤกษ์ มุ่งหน้าไปแยกตากสิน'
+,'From Ratchada-Ratchaphruek Intersection towards Taksin Intersection'
+,13.71849
+,100.48355
+,'10.116.129.126'
+],['180'
+,'สะพานลอยใกล้ซอยนราธิวาส 24 ถนนนราธิวาส'
+,'Footbridge near Soi Narathiwas 24 on Narathiwas Road'
+,'รถมาจากแยกจันทน์-นราธิวาส มุ่งหน้าไปแยกรัชดา-นราธิวาส'
+,'From Chan-Naradhiwas Intersection towards Ratchada-Naradhiwas Intersection'
+,13.70236
+,100.54051
+,'10.112.129.121'
+],['181'
+,'สะพานลอยใกล้ซอยนราธิวาส 24 ถนนนราธิวาส'
+,'Footbridge near Soi Narathiwas 24 on Narathiwas Road'
+,'รถมาจากแยกรัชดา-นราธิวาส มุ่งหน้าไปแยกจันทน์-นราธิวาส'
+,'From Ratchada-Naradhiwas Intersection towards Chan-Naradhiwas Intersection'
+,13.70212
+,100.54031
+,'10.112.129.122'
+],['190'
+,'สะพานลอยใกล้ซอยนราธิวาส 9 ถนนนราธิวาส'
+,'Footbridge near Soi Narathiwas 9 on Narathiwas Road'
+,'รถมาจากแยกสาทร-นราธิวาส มุ่งหน้าไปแยกจันทน์-นราธิวาส'
+,'From Sathon-Naradhiwas Intersection towards Chan-Naradhiwas Intersection'
+,13.71822
+,100.5323
+,'10.128.129.121'
+],['191'
+,'สะพานลอยใกล้ซอยนราธิวาส 9 ถนนนราธิวาส'
+,'Footbridge near Soi Narathiwas 9 on Narathiwas Road'
+,'รถมาจากแยกจันทน์-นราธิวาส มุ่งหน้าไปแยกสาทร-นราธิวาส'
+,'From Chan-Naradhiwas Intersection towards Sathon-Naradhiwas Intersection'
+,13.71799
+,100.53205
+,'10.128.129.122'
+],['188'
+,'สะพานลอยใกล้ซอยพระรามที่ 3 ซอย 68 ถนนพระรามที่ 3'
+,'Footbridge near Soi Rama 3 Soi68 on Rama 3 Road'
+,'รถมาจากแยก ณ ระนอง มุ่งหน้าไปแยกนางลิ้นจี่'
+,'From Na Ranong Intersection towards Nang Linchi Intersection'
+,13.7031
+,100.54591
+,'10.112.129.129'
+],['189'
+,'สะพานลอยใกล้ซอยพระรามที่ 3 ซอย 68 ถนนพระรามที่ 3'
+,'Footbridge near Soi Rama 3 Soi68 on Rama 3 Road'
+,'รถมาจากแยกนางลิ้นจี่ มุ่งหน้าไปแยก ณ ระนอง'
+,'From Nang Linchi Intersection towards Na Ranong Intersection'
+,13.70302
+,100.54573
+,'10.112.129.130'
+],['256'
+,'สะพานลอยใกล้ซอยเพชรบุรี 27 ถนนเพชรบุรี'
+,'Footbridge near Soi Phetchaburi 27 on Phetchaburi Road'
+,'รถมาจากแยกประตูน้ำ มุ่งหน้าไปแยกใต่ด่วนเพชรบุรี'
+,'From Pratu Nam Intersection towards Intersection under Phetchaburi Expy'
+,13.74953
+,100.54403
+,'10.137.129.130'
+],['257'
+,'สะพานลอยใกล้ซอยเพชรบุรี 27 ถนนเพชรบุรี'
+,'Footbridge near Soi Phetchaburi 27 on Phetchaburi Road'
+,'รถมาจากแยกใต้ด่วนเพชรบุรี มุ่งหน้าไปแยกประตูน้ำ'
+,'From Intersection under Phetchaburi Expy towards Pratu Nam Intersection'
+,13.74949
+,100.54416
+,'10.137.129.131'
+],['250'
+,'สะพานลอยใกล้ซอยเพชรบุรี 38 ถนนเพชรบุรี'
+,'Footbridge near Soi Phetchaburi 38 on Phetchaburi Road'
+,'รถมาจากแยกพร้อมพรรณ มุ่งหน้าไปแยกอโศกเพชร'
+,'From Prompan Intersection towards Asok-Phetchaburi Intersection'
+,13.74854
+,100.56598
+,'10.137.129.123'
+],['218'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 14 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 14 on Ratchadaphisek Road'
+,'รถมาจากแยกห้วยขวาง มุ่งหน้าไปแยกรัชดา-สุทธิสาร'
+,'From Huai Khwang Intersection towards Ratchada-Sutthisan Intersection'
+,13.78186
+,100.57372
+,'10.117.129.127'
+],['219'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 14 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 14 on Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-สุทธิสาร มุ่งหน้าไปแยกห้วยขวาง'
+,'From Ratchada-Sutthisan Intersection towards Huai Khwang Intersection'
+,13.78194
+,100.57389
+,'10.117.129.128'
+],['30'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 21 ถนนจรัญสนิทวงศ์'
+,'Footbridge near Soi Ratchadaphisek 21 on Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-ราชพฤกษ์'
+,'From Ratchada-Ratchaphruek Intersection'
+,13.72745
+,100.47507
+,'10.116.128.30'
+],['31'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 21 ถนนจรัญสนิทวงศ์'
+,'Footbridge near Soi Ratchadaphisek 21 on Ratchadaphisek Road'
+,'รถมาจากแยกท่าพระ'
+,'From Tha Phra Intersection'
+,13.72764
+,100.47513
+,'10.116.128.32'
+],['222'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 22 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 22 on Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-สุทธิสาร มุ่งหน้าไปแยกรัชดา-ลาดพร้าว'
+,'From Ratchada-Sutthisan Intersection towards Ratchada-Lat Phrao Intersection'
+,13.79703
+,100.57444
+,'10.117.129.133'
+],['223'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 22 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 22 on Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-ลาดพร้าว มุ่งหน้าไปแยกรัชดา-สุทธิสาร'
+,'From Ratchada-Lat Phrao Intersection Towards Ratchada-Sutthisan Intersection '
+,13.79702
+,100.57464
+,'10.117.129.134'
+],['210'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 3 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 3 on Ratchadaphisek Road'
+,'รถมาจากแยกเทียมร่วมมิตร มุ่งหน้าไปแยกพระราม 9'
+,'From Thiam Ruam Mit Intersection towards Rama 9 Intersection'
+,13.76167
+,100.56688
+,'10.117.129.121'
+],['214'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 7 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 7 on Ratchadaphisek Road'
+,'รถมาจากแยกห้วยขวาง มุ่งหน้าไปแยกเทียมร่วมมิตร'
+,'From Huai Khwang Intersection towards Thiam Ruam Mit Intersection'
+,13.77281
+,100.57348
+,'10.117.129.125'
+],['215'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 7 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 7 on Ratchadaphisek Road'
+,'รถมาจากแยกเทียมร่วมมิตร มุ่งหน้าไปแยกห้วยขวาง'
+,'From Thiam Ruam Mit Intersection towards Huai Khwang Intersection'
+,13.77275
+,100.57328
+,'10.117.129.126'
+],['162'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 9 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 9 on Ratchadaphisek Road'
+,'รถมาจากรัชดา-ราชพฤกษ์ มุ่งหน้าไปแยกมไหสวรรค์'
+,'From Ratchada-Ratchaphruek Intersection towards Mahai Sawan Intersection'
+,13.70918
+,100.48021
+,'10.116.129.127'
+],['163'
+,'สะพานลอยใกล้ซอยรัชดาภิเษก 9 ถนนรัชดาภิเษก'
+,'Footbridge near Soi Ratchadaphisek 9 on Ratchadaphisek Road'
+,'รถมาจากแยกมไหสวรรค์ มุ่งหน้าไปแยกรัชดา-ราชพฤกษ์'
+,'From Mahai Sawan Intersection towards Ratchada-Ratchaphruek Intersection'
+,13.70902
+,100.48008
+,'10.116.129.128'
+],['258'
+,'สะพานลอยใกล้ซอยศรีอยุธยา 5 ถนนศรีอยุธยา'
+,'Footbridge near Soi Si Ayutthaya 5 on Si Ayutthaya Road'
+,'รถมาจากแยกศรีอยุธยา มุ่งหน้าไปแยกพญาไท'
+,'From Si Ayutthaya Intersection towards Payathai Intersection'
+,13.75958
+,100.53083
+,'10.137.129.132'
+],['259'
+,'สะพานลอยใกล้ซอยศรีอยุธยา 5 ถนนศรีอยุธยา'
+,'Footbridge near Soi Si Ayutthaya 5 on Si Ayutthaya Road'
+,'รถมาจากแยกพญาไท มุ่งหน้าไปแยกศรีอยุธยา'
+,'From Payathai Intersection towards Si Ayutthaya Intersection'
+,13.75941
+,100.53089
+,'10.137.129.133'
+],['158'
+,'สะพานลอยใกล้ซอยสมเด็จพระเจ้าตากสิน 19 ถนนสมเด็จพระเจ้าตากสิน'
+,'Footbridge near Soi Somdet Phra Chao Taksin 19 on Somdet Phra Chao Taksin Road'
+,'รถมาจากแยกตากสิน มุ่งหน้าไปแยกมไหสวรรค์'
+,'From Taksin Intersection towards Mahai Sawan Intersection'
+,13.71271
+,100.48847
+,'10.116.129.123'
+],['159'
+,'สะพานลอยใกล้ซอยสมเด็จพระเจ้าตากสิน 19 ถนนสมเด็จพระเจ้าตากสิน'
+,'Footbridge near Soi Somdet Phra Chao Taksin 19 on Somdet Phra Chao Taksin Road'
+,'รถมาจากแยกมไหสวรรค์ มุ่งหน้าไปแยกตากสิน'
+,'From Mahai Sawan Intersection towards Taksin Intersection'
+,13.71272
+,100.48832
+,'10.116.129.124'
+],['192'
+,'สะพานลอยใกล้ซอยสาทร 12 ถนนสาทร'
+,'Footbridge near Soi Sathon 12 on Sathon Road'
+,'รถมาจากแยกสาทร-เจริญกรุง มุ่งหน้าไปแยกสาทร-นราธิวาส'
+,'From Sathon-Charoen Krung Intersection towards Sathon-Naradhiwas Intersection'
+,13.72071
+,100.52604
+,'10.128.129.125'
+],['193'
+,'สะพานลอยใกล้ซอยสาทร 12 ถนนสาทร'
+,'Footbridge near Soi Sathon 12 on Sathon Road'
+,'รถมาจากแยกสาทร-นราธิวาส มุ่งหน้าไปแยกสาทร-เจริญกรุง'
+,'From Sathon-Naradhiwas Intersection towards Sathon-Charoen Krung Intersection'
+,13.72051
+,100.52621
+,'10.128.129.126'
+],['132'
+,'สะพานลอยใกล้บริษัทการบินไทย จำกัด(มหาชน) ปากซอยวิภาวดีรังสิต 20 ถนนวิภาวดีรังสิต'
+,'Footbridge near Thai Airways International Public Company Limited Entrance Soi Vibhavadi-Rangsit'
+,'รถมาจากแยกสุทธิสาร มุ่งหน้าไปแยกลาดพร้าว'
+,'From Sutthisan Intersection towards Lat Phrao Intersection'
+,13.80306
+,100.56021
+,'10.130.129.121'
+],['133'
+,'สะพานลอยใกล้บริษัทการบินไทย จำกัด(มหาชน) ปากซอยวิภาวดีรังสิต 20 ถนนวิภาวดีรังสิต'
+,'Footbridge near Thai Airways International Public Company Limited Entrance Soi Vibhavadi-Rangsit'
+,'รถมาจากแยกลาดพร้าว มุ่งหน้าไปแยกสุทธิสาร'
+,'From Lat Phrao Intersection towards Sutthisan Intersection'
+,13.80319
+,100.56054
+,'10.130.129.122'
+],['212'
+,'สะพานลอยใกล้บิ๊กซีรัชดา ถนนรัชดาภิเษก'
+,'Footbridge near Big C Ratchadaphisek on Ratchadaphisek Road'
+,'รถมาจากแยกเทียมร่วมมิตร มุ่งหน้าไปแยกพระราม 9'
+,'From Thiam Ruam Mit Intersection towards Rama 9 Intersection'
+,13.76772
+,100.57165
+,'10.117.129.123'
+],['213'
+,'สะพานลอยใกล้บิ๊กซีรัชดา ถนนรัชดาภิเษก'
+,'Footbridge near Big C Ratchadaphisek on Ratchadaphisek Road'
+,'รถมาจากแยกพระราม 9 มุ่งหน้าไปแยกเทียมร่วมมิตร'
+,'From Rama 9 Intersection towards Thiam Ruam Mit Intersection '
+,13.76784
+,100.57146
+,'10.117.129.124'
+],['194'
+,'สะพานลอยใกล้ปากซอยคอนแวนต์ ถนนสาทรใต้'
+,'Footbridge near Entrance to Soi Convent on  South Sathorn Road'
+,'รถมาจากแยกสาทร-นราธิวาส มุ่งหน้าไปแยกวิทยุ'
+,'From Sathon-Naradhiwas Intersection towards Witthayu Intersection'
+,13.72369
+,100.53598
+,'10.128.129.127'
+],['195'
+,'สะพานลอยใกล้ปากซอยคอนแวนต์ ถนนสาทรใต้'
+,'Footbridge near Entrance to Soi Convent on  South Sathorn Road'
+,'รถมาจากแยกวิทยุ มุ่งหน้าไปแยกสาทร-นราธิวาส'
+,'From Witthayu Intersection towards Sathon-Naradhiwas Intersection'
+,13.72348
+,100.53611
+,'10.128.129.128'
+],['142'
+,'สะพานลอยใกล้ปากซอยบุญอยู่ ถนนดินแดง'
+,'Footbridge near Entrance to Soi Bun Yu on Din Daeng Road'
+,'รถมาจากอนุสาวรีย์ชัยสมรภูมิ มุ่งหน้าไปแยกใต้ทางด่วนดินแดง'
+,'From Victory Monument towards Intersection under Din Daeng Expy'
+,13.76336
+,100.54502
+,'10.126.129.121'
+],['143'
+,'สะพานลอยใกล้ปากซอยบุญอยู่ ถนนดินแดง'
+,'Footbridge near Entrance to Soi Bun Yu on Din Daeng Road'
+,'รถมาจากแยกใต้ทางด่วนดินแดง มุ่งหน้าไปอนุสาวรีย์ชัยสมรภูมิ'
+,'From Dindaeng Under ExpressWay towards Victory Monument'
+,13.76327
+,100.54515
+,'10.126.129.122'
+],['170'
+,'สะพานลอยใกล้โรงพยาบาลวุฒิสมเด็จย่า ถนนพหลโยธิน'
+,'Footbridge near  Nawati Somdet Ya Hospital on Phahon Yothin Road'
+,'รถมาจากอนุสาวรีย์ชัยสมรภูมิ มุ่งหน้าไปแยกสะพานควาย'
+,'From Victory Monument towards Saphan Khwai Intersection'
+,13.78402
+,100.54611
+,'10.114.129.121'
+],['171'
+,'สะพานลอยใกล้โรงพยาบาลวุฒิสมเด็จย่า ถนนพหลโยธิน'
+,'Footbridge near  Nawati Somdet Ya Hospital on Phahon Yothin Road'
+,'รถมาจากแยกสะพานควาย มุ่งหน้าไปอนุสาวรีย์ชัยสมรภูมิ'
+,'From Saphan Khwai Intersection towards Victory Monument'
+,13.78407
+,100.5463
+,'10.114.129.122'
+],['182'
+,'สะพานลอยใกล้โรงพยาบาลสัตว์พระราม 3 ถนนนราธิวาส'
+,'Footbridge near Rama 3 Animal Hospital on Narathiwas Road'
+,'รถมาจากแยกพระรามที่ 3-นราธิวาส มุ่งหน้าไปแยกรัชดา-นราธิวาส'
+,'From Rama 3-Naradhiwas Intersection towards Ratchada-Naradhiwas Intersection'
+,13.69901
+,100.54252
+,'10.112.129.123'
+],['183'
+,'สะพานลอยใกล้โรงพยาบาลสัตว์พระราม 3 ถนนนราธิวาส'
+,'Footbridge near Rama 3 Animal Hospital on Narathiwas Road'
+,'รถมาจากแยกรัชดา-นราธิวาส มุ่งหน้าไปแยกพระรามที่ 3-นราธิวาส'
+,'From Ratchada-Naradhiwas Intersection towards Rama 3-Naradhiwas Intersection'
+,13.69928
+,100.54273
+,'10.112.129.124'
+],['251'
+,'สะพานลอยใกล้วัดดิสหงษาราม ถนนเพชรบุรี'
+,'Footbridge near Dishongsaram Temple on Phetchaburi Road'
+,'รถมาจากแยกใต้ด่วนเพชรบรี มุ่งหน้าไปแยกมิตรสัมพันธ์'
+,'From Intersection under Phetchaburi Expy towards Mit Samphan Intersection'
+,13.74985
+,100.55148
+,'10.137.129.124'
+],['252'
+,'สะพานลอยใกล้วัดดิสหงษาราม ถนนเพชรบุรี'
+,'Footbridge near Dishongsaram Temple on Phetchaburi Road'
+,'รถมาจากแยกมิตรสัมพันธ์ มุ่งหน้าไปแยกใต่ด่วนเพชรบุรี'
+,'From Mit Samphan Intersection towards  Intersection under Phetchaburi Expy'
+,13.74981
+,100.55158
+,'10.137.129.125'
+],['225'
+,'สะพานลอยใกล้ศาลอาญา ถนนรัชดาภิเษก'
+,'Footbridge near The Criminal Court on  Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-ลาดพร้าว มุ่งหน้าไปแยกรัชโยธิน'
+,'From Ratchada-Lat Phrao Intersection towards Ratchayothin Intersection'
+,13.81523
+,100.57533
+,'10.117.129.136'
+],['128'
+,'สะพานลอยใกล้สถานีรถไฟฟ้ากรุงธนบุรี ถนนกรุงธนบุรี'
+,'Footbridge near Krung Thon Buri BTS Station on Krung Thon Buri Road'
+,'รถมาจากสะพานตากสิน มุ่งหน้าไปแยกตากสิน'
+,'From Saphan Taksin towards Taksin Intersection'
+,13.72077
+,100.50375
+,'10.118.129.121'
+],['129'
+,'สะพานลอยใกล้สถานีรถไฟฟ้ากรุงธนบุรี ถนนกรุงธนบุรี'
+,'Footbridge near Krung Thon Buri BTS Station on Krung Thon Buri Road'
+,'รถมาจากแยกตากสิน มุ่งหน้าไปสะพานตากสิน'
+,'From Taksin Intersection towards Saphan Taksin'
+,13.72101
+,100.50363
+,'10.118.129.122'
+],['130'
+,'สะพานลอยใกล้สถานีรถไฟฟ้าวงเวียนใหญ่ ถนนกรุงธนบุรี'
+,'Footbridge near Wongwian Yai BTS Station on Krung Thon Buri Road'
+,'รถมาจากสะพานตากสิน มุ่งหน้าไปแยกตากสิน'
+,'From Saphan Taksin  towards Taksin Intersection'
+,13.72116
+,100.49695
+,'10.118.129.123'
+],['131'
+,'สะพานลอยใกล้สถานีรถไฟฟ้าวงเวียนใหญ่ ถนนกรุงธนบุรี'
+,'Footbridge near Wongwian Yai BTS Station on Krung Thon Buri Road'
+,'รถมาจากแยกตากสิน มุ่งหน้าไปสะพานตากสิน'
+,'From Taksin Intersection towards Saphan Taksin'
+,13.72092
+,100.49681
+,'10.118.129.124'
+],['245'
+,'สะพานลอยหน้า ม.ราชภัฏวไลยอลงกรณ์ ใกล้ซอยเพชรบุรี 5 ถนนเพชรบุรี'
+,'Footbridge in front of Valaya alongkorn rajabhat university near Soi Phetchaburi 5 on Phetchaburi Road'
+,'รถมาจากแยกราชเทวี มุ่งหน้าไปแยกเพชรพระราม'
+,'From Ratchathewi Intersection towards Phet Phra Ram Intersection'
+,13.75452
+,100.52812
+,'10.107.129.136'
+],['246'
+,'สะพานลอยหน้า ม.ราชภัฏวไลยอลงกรณ์ ใกล้ซอยเพชรบุรี 5 ถนนเพชรบุรี'
+,'Footbridge in front of Valaya alongkorn rajabhat university near Soi Phetchaburi 5 on Phetchaburi Road'
+,'รถมาจากแยกเพชรพระราม มุ่งหน้าไปแยกราชเทวี'
+,'From Phet Phra Ram Intersection towards Ratchathewi Intersection'
+,13.75459
+,100.528
+,'10.107.129.137'
+],['247'
+,'สะพานลอยหน้า รร.วัดพระยายัง ใกล้ซอยพระรามที่ 6 ซอย 17 ถนนพระรามที่ 6'
+,'Footbridge in front of Prayayang Temple near Soi Rama 6 soi 17 on Rama 6 Road'
+,'รถมาจากแยกพงษ์พระราม มุ่งหน้าไปแยกอุรุพงษ์'
+,'From Pong Phra Ram Intersection towards Uruphong Intersection'
+,13.75225
+,100.52218
+,'10.107.129.138'
+],['178'
+,'สะพานลอยหน้า โรงพยาบาลพญาไท 2 ถนนพหลโยธิน'
+,'Footbridge in front of  PHYATHAI HOSPITAL 2 on Phahon Yothin Road'
+,'รถมาจากแยกสะพานควาย มุ่งหน้าไปอนุสาวรีย์ชัยสมรภูมิ'
+,'From Saphan Khwai Intersection towards Victory Monument'
+,13.76938
+,100.54086
+,'10.114.129.129'
+],['179'
+,'สะพานลอยหน้า โรงพยาบาลพญาไท 2 ถนนพหลโยธิน'
+,'Footbridge in front of  PHYATHAI HOSPITAL 2 on Phahon Yothin Road'
+,'รถมาจากอนุสาวรีย์ชัยสมรภูมิ มุ่งหน้าไปแยกสะพานควาย'
+,'From Victory Monument towards Saphan Khwai Intersection'
+,13.76937
+,100.5407
+,'10.114.129.130'
+],['249'
+,'สะพานลอยหน้า วชิรพยาบาล ถนนสามเสน'
+,'Footbridge in front of Faculty of Medcine Vajira Hospital on Sam Sen Road'
+,'รถมาจากแยกวชิระ มุ่งหน้าไปแยกซังฮี้'
+,'From Vajira Intersection towards Sanghee Intersection'
+,13.77991
+,100.50926
+,'10.101.129.124'
+],['134'
+,'สะพานลอยหน้าโตโยต้าชัวร์ ถนนรัชดาภิเษก'
+,'Footbridge in front of Toyota Sure on  Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-ลาดพร้าว มุ่งหน้าไปแยกรัชโยธิน'
+,'From Ratchada-Lat Phrao Intersection towards Ratchayothin Intersection'
+,13.82372
+,100.57306
+,'10.130.129.123'
+],['135'
+,'สะพานลอยหน้าโตโยต้าชัวร์ ถนนรัชดาภิเษก'
+,'Footbridge in front of Toyota Sure on  Ratchadaphisek Road'
+,'รถมาจากแยกรัชโยธิน มุ่งหน้าไปแยกรัชดาลาดพร้าว'
+,'From Ratchayothin Intersection towards Ratchada-Lat Phrao Intersection'
+,13.82394
+,100.57316
+,'10.130.129.124'
+],['140'
+,'สะพานลอยหน้าบริษัท ปตท. จำกัด(มหาชน) ใกล้ซอยวิภาวดีรังสิต 11 ถนนวิภาวดีรังสิต'
+,'Footbridge in front of PTT Public Company Limited near Soi Vibhavadi Rangsit 11 on Vibhavadi Rangsit Road'
+,'รถมาจากแยกลาดพร้าว มุ่งหน้าไปแยกรัชวิภา'
+,'From Lat Phrao Intersection towards Ratchawipha Interchange'
+,13.81832
+,100.55863
+,'10.130.129.129'
+],['141'
+,'สะพานลอยหน้าบริษัท ปตท. จำกัด(มหาชน) ใกล้ซอยวิภาวดีรังสิต 11 ถนนวิภาวดีรังสิต'
+,'Footbridge in front of PTT Public Company Limited near Soi Vibhavadi Rangsit 11 on Vibhavadi Rangsit Road'
+,'รถมาจากแยกรัชวิภา มุ่งหน้าไปแยกลาดพร้าว'
+,'From Ratchawipha Interchange towards Lat Phrao Intersection'
+,13.81844
+,100.5589
+,'10.130.129.130'
+],['254'
+,'สะพานลอยหน้าพันธุ์ทิพย์พลาซ่า ถนนเพชรบุรี'
+,'Footbridge in front of Pantip Plaza on Phetchaburi Road'
+,'รถมาจากแยกพญาไท มุ่งหน้าไปแยกประตูน้ำ'
+,'From Payathai Intersection towards Pratu Nam Intersection'
+,13.75127
+,100.53732
+,'10.137.129.128'
+],['255'
+,'สะพานลอยหน้าพันธุ์ทิพย์พลาซ่า ถนนเพชรบุรี'
+,'Footbridge in front of Pantip Plaza on Phetchaburi Road'
+,'รถมาจากแยกประตูน้ำ มุ่งหน้าไปแยกราชเทวี'
+,'From Pratu Nam Intersection towards Ratchathewi Intersection'
+,13.75122
+,100.5374
+,'10.137.129.129'
+],['196'
+,'สะพานลอยหน้าแมคโคร ถนนนราธิวาส'
+,'Footbridge in front of Makro on Narathiwas Road'
+,'รถมาจากแยกสาทร-นราธิวาส มุ่งหน้าไปแยกจันทน์-นราธิวาสสาทร'
+,'From Sathon-Naradhiwas Intersection towards Chan-Naradhiwas Intersection'
+,13.70981
+,100.53647
+,'10.128.129.129'
+],['197'
+,'สะพานลอยหน้าแมคโคร ถนนนราธิวาส'
+,'Footbridge in front of Makro on Narathiwas Road'
+,'รถมาจากแยกจันทน์-นราธวาส มุ่งหน้าไปแยกสาทร-นราธิวาส'
+,'From Chan-Naradhiwas Intersection towards Sathon-Naradhiwas Intersection'
+,13.70958
+,100.53621
+,'10.128.129.130'
+],['138'
+,'สะพานลอยหน้าโรงเรียนหอวัง ถนนพหลโยธิน'
+,'Footbridge in front of Horwang School on Phahon Yothin Road'
+,'รถมาจากแยกลาดพร้าว มุ่งหน้าไปแยกรัชโยธิน'
+,'From Lat Phrao Intersection  towards Ratchayothin Intersection'
+,13.81817
+,100.56284
+,'10.130.129.127'
+],['139'
+,'สะพานลอยหน้าโรงเรียนหอวัง ถนนพหลโยธิน'
+,'Footbridge in front of Horwang School on Phahon Yothin Road'
+,'รถมาจากแยกรัชโยธิน มุ่งหน้าไปแยกลาดพร้าว'
+,'From Ratchayothin Intersection  towards Lat Phrao Intersection'
+,13.81817
+,100.56304
+,'10.130.129.128'
+],['226'
+,'สะพานลอยหน้าวัดเทพศิรินทร์ ถนนหลวง'
+,'Footbridge in front of Wat Thepsirin on Luang Road'
+,'รถมาจากแยกนพวงศ์ มุ่งหน้าไปแยกพลับพลาไชย'
+,'From Nopphawong Intersection towards Klang Hospital'
+,13.746
+,100.51323
+,'10.151.129.121'
+],['1'
+,'สะพานลอยหน้าวัดสุวรรณ ตรงข้ามซอยเจริญนคร 9 ถนนเจริญนคร'
+,'Footbridge in front of Wat Suwan across from Soi Charoen Nakhon 9 on Charoen Nakhon Road'
+,'รถมาจากแยกเจริญนครใต้'
+,'From South Charoen Nakhon Intersection'
+,13.72384
+,100.50904
+,'10.118.128.22'
+],['2'
+,'สะพานลอยหน้าวัดสุวรรณ ตรงข้ามซอยเจริญนคร 9 ถนนเจริญนคร'
+,'Footbridge in front of Wat Suwan across from Soi Charoen Nakhon 9 on Charoen Nakhon Road'
+,'รถมาจากแยกคลองสาน'
+,'From Knongsan Intersection'
+,13.72382
+,100.50911
+,'10.118.128.24'
+],['168'
+,'สะพานลอยหน้าวัดเสาหิน ใกล้ซอยวงศ์สว่าง 3 ถนนวงศ์สว่าง'
+,'Footbridge in front of Wat Sao  Hin  Near Soi Wong Sawang 3 on Wong Sawang Road'
+,'รถมาจากแยกวงศ์สว่าง มุ่งหน้าไปสะพานพระราม 7'
+,'From Wongsawang Intersection towards Rama 7 Bridge'
+,13.81861
+,100.5179
+,'10.125.129.125'
+],['169'
+,'สะพานลอยหน้าวัดเสาหิน ใกล้ซอยวงศ์สว่าง 3 ถนนวงศ์สว่าง'
+,'Footbridge in front of Wat Sao  Hin  Near Soi Wong Sawang 3 on Wong Sawang Road'
+,'รถมาจากสะพานพระราม 7 มุ่งหน้าไปแยกวงศ์สว่าง'
+,'From Rama7 Bridge towards Wongsawang Intersection'
+,13.81863
+,100.51776
+,'10.125.129.126'
+],['237'
+,'สะพานลอยหน้าสนามกีฬาศุภชลาศัย ถนนพระรามที่ 1'
+,'Footbridge in front of Suphachalasai Stadium on Rama 1 Road'
+,'รถมาจากแยกปทุมวัน มุ่งหน้าไปแยกเจริญผล'
+,'From Pathum Wan Intersection towards Cha Roen Phon Intersection'
+,13.74684
+,100.52671
+,'10.107.129.126'
+],['238'
+,'สะพานลอยหน้าสนามกีฬาศุภชลาศัย ถนนพระรามที่ 1'
+,'Footbridge in front of Suphachalasai Stadium on Rama 1 Road'
+,'รถมาจากแยกเจริญผล มุ่งหน้าไปแยกปทุมวัน'
+,'From Cha Roen Phon Intersection towards Pathum Wan Intersection'
+,13.74695
+,100.52661
+,'10.107.129.127'
+],['220'
+,'สะพานลอยหน้าอาคารเมืองไทย - ภัทร คอมเพล็กซ์ ถนนรัชดาภิเษก'
+,'Footbridge in front of Muangthai-Phatara Complex on Ratchadaphisek Road'
+,'รถมาจากแยกห้วยขวาง มุ่งหน้าไปแยกรัชดา-สุทธิสาร'
+,'From Huai Khwang Intersection towards Ratchada-Sutthisan Intersection'
+,13.7875
+,100.57398
+,'10.117.129.129'
+],['243'
+,'สะพานลอยหน้าอาคารอัมรินทร์พลาซ่า ถนนเพลินจิต'
+,'Footbridge in front of Amarin Plaza on Phloen Chit Road'
+,'รถมาจากแยกเพลินจิต มุ่งหน้าไปแยกราชประสงค์'
+,'From Phloen Chit Intersection towards Ratchaprasong Intersection'
+,13.74431
+,100.54137
+,'10.107.129.134'
+],['244'
+,'สะพานลอยหน้าอาคารอัมรินทร์พลาซ่า ถนนเพลินจิต'
+,'Footbridge in front of Amarin Plaza on Phloen Chit Road'
+,'รถมาจากแยกราชประสงค์ มุ่งหน้าไปแยกเพลินจิต'
+,'From Ratchaprasong Intersection towards Phloen Chit Intersection'
+,13.74445
+,100.54124
+,'10.107.129.135'
+],['216'
+,'เสาป้ายบอกทาง ใกล้อาคาร American Standard ถนนรัชดาภิเษก'
+,'Directional sign near American Standard Building on Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-ลาดพร้าว มุ่งหน้าไปแยกรัชดา-สุทธิสาร'
+,'From Ratchada-Lat Phrao Intersection towards Ratchada-Sutthisan Intersection'
+,13.79352
+,100.57445
+,'10.117.129.131'
+],['217'
+,'เสาป้ายบอกทาง ใกล้อาคาร American Standard ถนนรัชดาภิเษก'
+,'Directional sign near American Standard Building on Ratchadaphisek Road'
+,'รถมาจากแยกรัชดา-สุทธิสาร มุ่งหน้าไปแยกรัชดา-ลาดพร้าว'
+,'From Ratchada-Sutthisan Intersection towards Ratchada-Lat Phrao Intersection'
+,13.79354
+,100.5743
+,'10.117.129.132'
+],['263'
+,'เสาป้ายหน้าศรีย่านทันตแพทย์ เยื้องซอยศรีย่าน 2 ถนนนครไชยศรี'
+,'Directional sign near Sriyan Dental Building on Sriyan 2 on Nakhon Chai Si Road'
+,'รถมาจากสามเสน'
+,'From Sam Sen Intersection'
+,13.78408
+,100.5141
+,'10.102.102.147'
+],['264'
+,'เสาป้ายหน้าศรีย่านทันตแพทย์ เยื้องซอยศรีย่าน 2 ถนนนครไชยศรี'
+,'Directional sign near Sriyan Dental Building on Sriyan 2 on Nakhon Chai Si Road'
+,'รถมาจากประดิพัทธิ์'
+,'From Pradiphat Intersection'
+,13.78408
+,100.5141
+,'10.102.102.148'
+],['228'
+,'หน้า รพ.กลาง ถนนหลวง'
+,'In front of Klang Hospital on Luang Road'
+,'รถมาจากแยกโรงพยาบาลกลาง มุ่งหน้าไปแยกวรจักร'
+,'From Klang Hospital  towards Worachak Intersection'
+,13.74709
+,100.50944
+,'10.151.129.124'
+],['261'
+,'หน้ากรมชลประทาน ถนนสามเสน'
+,'In front of Royal Irrigation Department on Sam Sen Road'
+,'รถมาจากแยกศรีย่าน'
+,'From Si Yan Intersection'
+,13.78669
+,100.51266
+,'10.102.101.12'
+],['262'
+,'หน้ากรมชลประทาน ถนนสามเสน'
+,'In front of Royal Irrigation Department on Sam Sen Road'
+,'รถมาจากแยกเกียกกาย'
+,'From Keakkai Intersection'
+,13.78663
+,100.5127
+,'10.102.101.14'
+],['71'
+,'หน้ากองบัญชาการตำรวจนครบาล ถนนสามเสน'
+,'In front of Metropolitan Police Bureau on Sam Sen Road'
+,'รถมาจากแยกพระรูป ร.5'
+,'From Lan Phra Rup Intersection'
+,13.76893
+,100.50983
+,'10.101.128.26'
+],['69'
+,'หน้าธนาคารแห่งประเทศไทย ถนนสามเสน'
+,'In front of The Bank of Thailand: BOT on Sam Sen Road'
+,'รถมาจากแยกบางขุนพรหม'
+,'From Bangkhunprom Intersection'
+,13.7685
+,100.50263
+,'10.101.128.22'
+],['227'
+,'หน้าบริษัทศรีรุ่งเรือง ถนนเจริญกรุง'
+,'In front of Thai Rung Rueang Machinery Ltd., on Charoen Krung Road'
+,'รถมาจากแยกเอส เอ บี มุ่งหน้าไปแยกเสือป่า'
+,'From S.A.B. Intersection towards Suea Pa Intersection'
+,13.74473
+,100.50662
+,'10.151.129.123'
+],['967'
+,'อุโมงค์ลาดปลาเค้า'
+,'Test System'
+,'Test System'
+,'Test System'
+,0
+,0
+,'10.156.102.67'
+]
+];
