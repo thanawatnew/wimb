@@ -4,6 +4,7 @@ work every five minutes, after that, rename the picture's folder name with minut
 import sched, time
 import os
 import get_image
+import shutil
 
 is_debug = True
 def check_init_files_and_folders():
@@ -40,23 +41,35 @@ def check_init_files_and_folders():
 	directory_list=[
 	'images',
 	'images_haar',
+	'images_haar_result',
 	'images_number',
 	'models',
+	'images_old',
 	]
 	
 	for file_name in file_list: print 'file '+file_name+' existed: '+str(os.path.isfile(file_name))
-	for directory_name in directory_list: print 'directory '+directory_name+' existed: '+str(os.path.isdir(directory_name))
+	for directory_name in directory_list: 
+		print 'directory '+directory_name+' existed: '+str(os.path.isdir(directory_name))
+		if not os.path.isdir(directory_name): os.makedirs(directory_name)
 
 url="http://www.bmatraffic.com/"
 if is_debug: print 'current absolute path of the project(path) is '+os.path.abspath('.')
 path=os.path.abspath('.')
 
-
-path=os.path.abspath('.')
-s=sched.scheduler(time.time,time.sleep)
-starttime=time.time()
-#get_image.get_pictures()
-while time.time()<starttime+5*60: # less than five minutes, just keep taking and processing pictures
-	s.enter(5,1,get_image.get_pictures(get_image.get_cookie(url)),()) #set first parameter in seconds
-	s.run()
+while True:
+	check_init_files_and_folders()
+	s=sched.scheduler(time.time,time.sleep)
+	starttime=time.time()
+	#get_image.get_pictures()
+	while time.time()<starttime+5*60: # less than five minutes, just keep taking and processing pictures
+		s.enter(5,1,get_image.get_pictures(get_image.get_cookie(url)),()) #set first parameter in seconds
+		try: s.run()
+		except: break
+	directory_list=[
+	'images',
+	'images_haar',
+	'images_haar_result',
+	'images_number',]
+	timestr = time.strftime("%Y%m%d_%H%M%S")
+	for directory_name in directory_list: shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
 #""" #for a multiple line comment

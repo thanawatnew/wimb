@@ -264,6 +264,14 @@ var locations=
 ,13.73904
 ,100.52222
 ,'10.107.129.124'
+],['107'
+,'ปากซอยเจริญกรุง 76 ถนนเจริญกรุง'
+,'Entrance to Soi Charoen Krung 76 on Charoen Krung Road'
+,'รถมาจากแยกตรอกจันทน์'
+,'From Trok Chan Intersection'
+,13.7014
+,100.50176
+,'10.128.128.72'
 ],['229'
 ,'ปากซอยระนอง2 ถนนพระราม 5'
 ,'Entrance to Soi Ranong 2 on Rama 5 Road'
@@ -480,30 +488,6 @@ var locations=
 ,13.70583
 ,100.52883
 ,'10.128.128.36'
-],['90'
-,'แยกจันทน์-สาธุประดิษฐ์'
-,'Chan-Sathu Pradit Intersection Intersection'
-,'รถมาจากแยกด่วนสาธุประดิษฐ์'
-,'From Duan Sathu Pradit Intersection'
-,13.70582
-,100.52868
-,'10.128.128.38'
-],['91'
-,'แยกจันทน์-สาธุประดิษฐ์'
-,'Chan-Sathu Pradit Intersection Intersection'
-,'รถมุ่งหน้าไปแยกด่วนสาธุประดิษฐ์'
-,'Towards Duan Sathu Pradit Intersection'
-,13.70586
-,100.52869
-,'10.128.128.40'
-],['908'
-,'แยกซังฮี้'
-,'Test System'
-,'Test System'
-,'Test System'
-,13.77831
-,100.50849
-,'10.156.102.8'
 ],['557'
 ,'แยกซังฮี้'
 ,'Sanghee Intersection'
@@ -536,6 +520,14 @@ var locations=
 ,13.77835
 ,100.50851
 ,'10.102.102.24'
+],['908'
+,'แยกซังฮี้'
+,'Test System'
+,'Test System'
+,'Test System'
+,13.77831
+,100.50849
+,'10.156.102.8'
 ],['288'
 ,'แยกซังฮี้'
 ,'Sanghee Intersection'
@@ -568,6 +560,30 @@ var locations=
 ,13.70773
 ,100.51856
 ,'10.128.128.48'
+],['100'
+,'แยกถนนตก(ถนนพระราม 3 ขาออก ข้างป้อมตำรวจ)'
+,'Near the police box on Rama 3 Road (outbound)'
+,'รถมาจากแยกตรอกจันทน์'
+,'From Trok Chan Intersection'
+,13.69726
+,100.4972
+,'10.128.128.58'
+],['101'
+,'แยกถนนตก(ถนนพระราม 3 ขาออก ข้างป้อมตำรวจ)'
+,'Near the police box on Rama 3 Road (outbound)'
+,'รถมาจากสะพานกรุงเทพ'
+,'From Krung Thep Bridge'
+,13.6974
+,100.49699
+,'10.128.128.60'
+],['102'
+,'แยกถนนตก(ถนนพระราม 3 ขาออก ข้างป้อมตำรวจ)'
+,'Near the police box on Rama 3 Road (outbound)'
+,'รถมาจากถนนตก'
+,'From Thanon Tok Intersection'
+,13.69704
+,100.49691
+,'10.128.128.62'
 ],['110'
 ,'แยกเทียมร่วมมิตร(เกาะกลางถนนเทียมร่วมมิตร หน้าอาคาร Cyber World Tower)'
 ,'Central barrier in front of Cyber World Tower on Thiam Ruam Mit Road'
@@ -584,6 +600,14 @@ var locations=
 ,13.76975
 ,100.57295
 ,'10.117.128.24'
+],['112'
+,'แยกเทียมร่วมมิตร(ถนนเทียมร่วมมิตร ข้างป้อมตำรวจ)'
+,'near the police box on Thiam Ruam Mit Road'
+,'รถมาจากถนนเทียมร่วมมิตร'
+,'From Thiam Ruam Mit Road'
+,13.76947
+,100.5729
+,'10.117.128.26'
 ],['113'
 ,'แยกเทียมร่วมมิตร(ถนนเทียมร่วมมิตร ข้างป้อมตำรวจ)'
 ,'near the police box on Thiam Ruam Mit Road'
@@ -776,14 +800,6 @@ var locations=
 ,13.78193
 ,100.51806
 ,'10.102.102.149'
-],['939'
-,'แยกมหาดไทย'
-,'Test System'
-,'Test System'
-,'Test System'
-,13.76043
-,100.6246
-,'10.156.102.39'
 ],['406'
 ,'แยกมัฆวาน'
 ,'Makkhawan  Intersection'
@@ -792,6 +808,14 @@ var locations=
 ,13.76376
 ,100.50945
 ,'10.101.102.61'
+],['360'
+,'แยกยมราช'
+,'Yommarat Intersection'
+,'รถมาจากแยกเสาวนี'
+,'From Saowa Ni Intersection'
+,13.75741
+,100.52061
+,'10.102.101.176'
 ],['549'
 ,'แยกยมราช'
 ,'Yommarat Intersection'
@@ -824,14 +848,6 @@ var locations=
 ,13.75724
 ,100.52051
 ,'10.102.102.124'
-],['360'
-,'แยกยมราช'
-,'Yommarat Intersection'
-,'รถมาจากแยกเสาวนี'
-,'From Saowa Ni Intersection'
-,13.75741
-,100.52061
-,'10.102.101.176'
 ],['74'
 ,'แยกรัชดา-นราธิวาส(เกาะกลางถนนนราธิวาส )'
 ,'Central barrier on Narathiwas Road'
@@ -888,6 +904,22 @@ var locations=
 ,13.81003
 ,100.57528
 ,'10.117.128.46'
+],['127'
+,'แยกรัชดา-ลาดพร้าว(ถนนลาดพร้าว ใกล้ซอยลาดพร้าว 30)'
+,'Near Soi Lat Phrao 30 on Lat Phrao Road'
+,'รถมาจากแยกรัชดา-ลาดพร้าว มุ่งหน้าไปแยกรัชโยธิน'
+,'From Ratchada-Lat Phrao Intersection towards Ratchayothin Intersection'
+,13.81001
+,100.57511
+,'10.117.128.48'
+],['119'
+,'แยกรัชดา-สุทธิสาร'
+,'Ratchada-Sutthisan Intersection'
+,'รถมาจากแยกห้วยขวาง'
+,'From Huai Khwang Intersection'
+,13.78953
+,100.57406
+,'10.117.128.32'
 ],['3'
 ,'แยกรัชโยธิน(เกาะกลางถนนรัชดาภิเษก หน้า สน.พหลโยธิน)'
 ,'Central barrier near Police station on Ratchadapisek Road'
@@ -896,6 +928,14 @@ var locations=
 ,13.82682
 ,100.56822
 ,'10.130.128.22'
+],['6'
+,'แยกรัชโยธิน(ถนนพหลโยธินขาออก ข้างป้อมตำรวจ)'
+,'Near the police box on Phahon Yothin Road (outbound)'
+,'รถมาจากแยกรัชวิภา'
+,'From Ratchawipha Intersection'
+,13.8272
+,100.56804
+,'10.130.128.28'
 ],['943'
 ,'แยกราชประสงค์'
 ,'Test System'
@@ -1592,22 +1632,6 @@ var locations=
 ,13.71849
 ,100.48355
 ,'10.116.129.126'
-],['180'
-,'สะพานลอยใกล้ซอยนราธิวาส 24 ถนนนราธิวาส'
-,'Footbridge near Soi Narathiwas 24 on Narathiwas Road'
-,'รถมาจากแยกจันทน์-นราธิวาส มุ่งหน้าไปแยกรัชดา-นราธิวาส'
-,'From Chan-Naradhiwas Intersection towards Ratchada-Naradhiwas Intersection'
-,13.70236
-,100.54051
-,'10.112.129.121'
-],['181'
-,'สะพานลอยใกล้ซอยนราธิวาส 24 ถนนนราธิวาส'
-,'Footbridge near Soi Narathiwas 24 on Narathiwas Road'
-,'รถมาจากแยกรัชดา-นราธิวาส มุ่งหน้าไปแยกจันทน์-นราธิวาส'
-,'From Ratchada-Naradhiwas Intersection towards Chan-Naradhiwas Intersection'
-,13.70212
-,100.54031
-,'10.112.129.122'
 ],['190'
 ,'สะพานลอยใกล้ซอยนราธิวาส 9 ถนนนราธิวาส'
 ,'Footbridge near Soi Narathiwas 9 on Narathiwas Road'
@@ -1752,6 +1776,14 @@ var locations=
 ,13.70902
 ,100.48008
 ,'10.116.129.128'
+],['38'
+,'สะพานลอยใกล้ซอยวงศ์สว่าง 21 ถนนวงศ์สว่าง'
+,'Footbridge near Soi Wong Sawang 21 on Wong Sawang Road'
+,'รถมาจากแยกวงศ์สว่าง'
+,'From Wongsawang Intersection'
+,13.82421
+,100.52412
+,'10.125.128.22'
 ],['258'
 ,'สะพานลอยใกล้ซอยศรีอยุธยา 5 ถนนศรีอยุธยา'
 ,'Footbridge near Soi Si Ayutthaya 5 on Si Ayutthaya Road'
@@ -2224,6 +2256,14 @@ var locations=
 ,13.76893
 ,100.50983
 ,'10.101.128.26'
+],['72'
+,'หน้ากองบัญชาการตำรวจนครบาล ถนนสามเสน'
+,'In front of Metropolitan Police Bureau on Sam Sen Road'
+,'รถมาจากแยกสี่เสาเทเวศน์'
+,'From Sisaothewet Intersection'
+,13.769
+,100.5098
+,'10.101.128.28'
 ],['69'
 ,'หน้าธนาคารแห่งประเทศไทย ถนนสามเสน'
 ,'In front of The Bank of Thailand: BOT on Sam Sen Road'

@@ -7,6 +7,8 @@ import urllib2
 import time
 import get_cam_detail
 import os
+import detect_bus_haar
+
 is_debug=True
 
 def send_response(url,cookies):
@@ -72,6 +74,9 @@ def get_pictures(cookies):
 		f=open(path+'/images/'+id+'_'+timestr+'.jpg','wb')
 		f.write(content)
 		f.close()
+		file_name= id+'_'+timestr#+'.jpg'
+		cascade = cv2.CascadeClassifier(path+"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")
+		rects=detect_bus_haar.detect_bus_haar(path,file_name,'.jpg',False,cascade)
 
 		if is_debug: print "==================================================================================="
 	return True
