@@ -67,7 +67,7 @@ while True:
 	while time.time()-starttime<15*60: # less than five minutes, just keep taking and processing pictures
 		s.enter(5,1,get_image.get_pictures(get_image.get_cookie(url)),()) #set first parameter in seconds
 		try: s.run()
-		except: break
+		except: pass
 	directory_list=[
 	'images',
 	'images_haar',
