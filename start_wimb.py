@@ -37,6 +37,7 @@ def check_init_files_and_folders():
 	#'maps.html', 
 	#'program_detect_rectangle.zip', 
 	'start_wimb.py',
+	'g.php',
 	]
 	directory_list=[
 	'images',
@@ -50,7 +51,9 @@ def check_init_files_and_folders():
 	for file_name in file_list: print 'file '+file_name+' existed: '+str(os.path.isfile(file_name))
 	for directory_name in directory_list: 
 		print 'directory '+directory_name+' existed: '+str(os.path.isdir(directory_name))
-		if not os.path.isdir(directory_name): os.makedirs(directory_name)
+		if not os.path.isdir(directory_name): 
+			os.makedirs(directory_name)
+		if "images" in directory_name: shutil.copy(path+'/g.php',path+'/'+directory_name+'/g.php')
 
 url="http://www.bmatraffic.com/"
 if is_debug: print 'current absolute path of the project(path) is '+os.path.abspath('.')
@@ -61,7 +64,7 @@ while True:
 	s=sched.scheduler(time.time,time.sleep)
 	starttime=time.time()
 	#get_image.get_pictures()
-	while time.time()<starttime+5*60: # less than five minutes, just keep taking and processing pictures
+	while time.time()-starttime<15*60: # less than five minutes, just keep taking and processing pictures
 		s.enter(5,1,get_image.get_pictures(get_image.get_cookie(url)),()) #set first parameter in seconds
 		try: s.run()
 		except: break
@@ -71,5 +74,7 @@ while True:
 	'images_haar_result',
 	'images_number',]
 	timestr = time.strftime("%Y%m%d_%H%M%S")
-	for directory_name in directory_list: shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
+	for directory_name in directory_list: 
+		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
+		
 #""" #for a multiple line comment

@@ -56,6 +56,7 @@ while(True):
 
 #ret, img = cap.read()
 def detect_bus_haar(path,image_name,file_type,is_ocr,cascade):
+	 if file_type!='.jpg': return None
 	 img = cv2.imread(path+'/images/'+image_name+file_type,cv2.IMREAD_COLOR)
 	 if is_ocr: call([path+"/DetectText",path+'/images/'+image_name+file_type,path+'/ocr/'+image_name+'_preprocess_0'+file_type,"0"])
 	 if is_ocr: call([path+"/DetectText",path+'/images/'+image_name+file_type,path+'/ocr/'+image_name+'_preprocess_1'+file_type,"1"])

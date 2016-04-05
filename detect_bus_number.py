@@ -6,9 +6,10 @@ path=os.path.abspath('.')
 file_type=".jpg"
 is_debug=True
 def detect_bus_number(path,file_name,file_type):
-	img = cv2.imread(path+'/'+file_name+file_type,0)
-	img2 = cv2.imread(path+'/'+file_name+file_type,1)
-	if is_debug: print path+'/'+file_name+file_type
+	img = cv2.imread(path+'/images_haar/'+file_name+file_type,0)
+	img2 = cv2.imread(path+'/images_haar/'+file_name+file_type,1)
+	if is_debug: print path+'/images_haar/'+file_name+file_type
+	
 	#equ = cv2.equalizeHist(img)
     #res = np.hstack((img,equ)) #stacking images side-by-side
 	
@@ -47,8 +48,8 @@ def detect_bus_number_group():
 	for file_name_with_extension in os.listdir(path+'/images_haar/')[count:]:
 		count+=1
 		if is_debug: print 'progress = '+str(count)+'/'+str(len(os.listdir(path+'/images_haar/')))+' '+str(count*100.0/len(os.listdir(path+'/images_haar/')))
-		if is_debug: print 'file name = '+file_name_with_extension
 		file_name,file_type=file_name_with_extension.split('.')[0],'.'+file_name_with_extension.split('.')[1]
+		if is_debug: print 'file name = '+file_name+', file_type = '+file_type
 		
 		# cv2.drawContours(color, contour, -1, (0, 255, 0), 3)
 		detect_bus_number(path,file_name,file_type)
