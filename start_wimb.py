@@ -76,5 +76,6 @@ while True:
 	timestr = time.strftime("%Y%m%d_%H%M%S")
 	for directory_name in directory_list: 
 		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
+	shutil.move('data.json',"images_old/"+'data'+'_'+timestr+'.json')
 		
 #""" #for a multiple line comment
