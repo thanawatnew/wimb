@@ -1,8 +1,9 @@
 import numpy as np
 import cv2
 import os
+import subprocess
 path=os.path.abspath('.')
-
+is_ocr=True
 file_type=".jpg"
 is_debug=True
 def detect_bus_number(path,file_name,file_type):
@@ -39,6 +40,7 @@ def detect_bus_number(path,file_name,file_type):
 			# break
 			roi = img[y:y+h,x:x+w]
 			cv2.imwrite(path+'/images_number/'+file_name+'_result_number_'+str(count_file_saved)+file_type, roi);
+			if is_ocr: subprocess.call(["tesseract",path+'/images_number/'+file_name+'_result_number_'+str(count_file_saved)+file_type,path+'/text_number/'+file_name+'_result_number_'+str(count_file_saved),'-psm','7','digits','nobatch'],stdout=open(os.devnull, 'wb'),stderr=subprocess.STDOUT)
 	cv2.imwrite(path+'/images_number/'+file_name+file_type,img)
 	if is_debug: print 'amount of contour in this picture: '+str(len(contour))
 	return img

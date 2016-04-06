@@ -46,6 +46,7 @@ def check_init_files_and_folders():
 	'images_number',
 	'models',
 	'images_old',
+	'text_number',
 	]
 	
 	for file_name in file_list: print 'file '+file_name+' existed: '+str(os.path.isfile(file_name))
@@ -72,7 +73,9 @@ while True:
 	'images',
 	'images_haar',
 	'images_haar_result',
-	'images_number',]
+	'images_number',
+	'text_number',
+	]
 	timestr = time.strftime("%Y%m%d_%H%M%S")
 	for directory_name in directory_list: 
 		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
