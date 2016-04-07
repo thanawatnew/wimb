@@ -79,6 +79,6 @@ def get_pictures(cookies):
 		rects=detect_bus_haar.detect_bus_haar(path,file_name,'.jpg',False,cascade)
 
 		if is_debug: print "==================================================================================="
-	if is_ocr: subprocess.call(["/bin/grep","-r",'.','text_number'],stdout=open(path+'/result.txt', 'wb'),stderr=subprocess.STDOUT)
+		if is_ocr: subprocess.call(["/bin/grep","-r",'.','text_number'],stdout=open(path+'/result.txt', 'wb'),stderr=subprocess.STDOUT)
 	return True
 
