@@ -5,8 +5,9 @@ import sched, time
 import os
 import get_image
 import shutil
-
+import subprocess
 is_debug = True
+is_ocr = True
 def check_init_files_and_folders():
 	"""
 	check if file exist
@@ -62,13 +63,11 @@ path=os.path.abspath('.')
 
 while True:
 	check_init_files_and_folders()
-	s=sched.scheduler(time.time,time.sleep)
 	starttime=time.time()
 	#get_image.get_pictures()
 	while time.time()-starttime<5*60: # less than five minutes, just keep taking and processing pictures
-		s.enter(5,1,get_image.get_pictures(get_image.get_cookie(url)),()) #set first parameter in seconds
-		try: s.run()
-		except: pass
+		get_image.get_pictures(get_image.get_cookie(url)) #set first parameter in seconds
+		time.sleep(5)
 	directory_list=[
 	'images',
 	'images_haar',
@@ -80,5 +79,6 @@ while True:
 	for directory_name in directory_list: 
 		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
 	shutil.move('data.json',"images_old/"+'data'+'_'+timestr+'.json')
+	shutil.move('result.txt',"images_old/"+'result'+'_'+timestr+'.txt')
 		
 #""" #for a multiple line comment
