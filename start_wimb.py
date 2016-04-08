@@ -65,7 +65,7 @@ while True:
 	check_init_files_and_folders()
 	starttime=time.time()
 	#get_image.get_pictures()
-	while time.time()-starttime<15*60: # less than five minutes, just keep taking and processing pictures
+	while time.time()-starttime<5*60: # less than five minutes, just keep taking and processing pictures
 		get_image.get_pictures(get_image.get_cookie(url)) #set first parameter in seconds
 		time.sleep(5)
 	directory_list=[
@@ -78,7 +78,7 @@ while True:
 	timestr = time.strftime("%Y%m%d_%H%M%S")
 	for directory_name in directory_list: 
 		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
-	shutil.move('locations.json',"images_old/"+'data'+'_'+timestr+'.json')
-	shutil.move('result.txt',"images_old/"+'result'+'_'+timestr+'.txt')
+	shutil.move('data.json',"images_old/"+'data'+'_'+timestr+'.json')
+	shutil.move('buses.json',"images_old/"+'buses'+'_'+timestr+'.json')
 		
 #""" #for a multiple line comment
