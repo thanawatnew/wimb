@@ -46,12 +46,13 @@ def get_cam_detail():
 
 	f=open('data.json','w')
 	f.write('var locations='+"\n")
-	f.write('['+"\n")
+	f.write('{'+"\n")
 
 
 	is_first_in_file=True
 	for i in cam_id:
 		if not is_first_in_file: f.write(',')
+		f.write('"'+str(i[0])+'"'+":\n")
 		is_first_in_file=False
 		f.write('[')
 		for count,j in enumerate(i):
@@ -61,8 +62,8 @@ def get_cam_detail():
 				try: f.write("'"+str(j)+"'\n")
 				except: f.write("'"+j.encode('utf8')+"'\n")
 			first=False
-		f.write(']')
+		f.write(',{}]')
 
-	f.write("\n"+'];')
+	f.write("\n"+'};')
 	f.close()
 	return cam_id

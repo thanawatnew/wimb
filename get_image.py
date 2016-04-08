@@ -79,6 +79,33 @@ def get_pictures(cookies):
 		rects=detect_bus_haar.detect_bus_haar(path,file_name,'.jpg',False,cascade)
 
 		if is_debug: print "==================================================================================="
-		if is_ocr: subprocess.call(["/bin/grep","-r",'.','text_number'],stdout=open(path+'/result.txt', 'wb'),stderr=subprocess.STDOUT)
+		if is_ocr: 
+			output_process = subprocess.Popen(["/bin/grep","-r",'.','text_number'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+			outputs = output_process.stdout.read().split('\n')
+			f=open('buses.json','w')
+			f.write('{'+"\n")
+			is_first =True
+			for output in outputs:
+				try: 
+					o=output.split('/')[1].split(':')
+					if not is_first: f.write(',')
+					else: is_first = False
+				except:
+					if is_debug: print output
+					continue
+				bus_detail = o[0].split('.')[0].split('_')
+				bus_result = o[1]
+				
+				f.write('"'+str(bus_detail[1])+'_'+str(bus_detail[2])+'_'+str(bus_detail[3])+'_'+str(bus_detail[4])+'":'+"\n")
+				f.write("[")
+				for i in [0,1,2,4,7]:
+					try: 
+						f.write('"'+str(bus_detail[i])+'"')
+						f.write(',')
+					except: pass
+				f.write('"'+str(bus_result[0])+'"')
+				f.write("]\n")
+			f.write('}'+"\n")
+			f.close()
 	return True
 
