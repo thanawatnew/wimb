@@ -2,6 +2,8 @@
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="data.json"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.6"></script>
+<script src="/html/wimb/js/maps.js" type="text/javascript"></script>
 <script>
 //var data =[];
 function getData() {
@@ -50,11 +52,13 @@ function getData() {
 		//return data2;
 	
 }
-var data3 = setInterval(getData, 5000);
-
+getData();
+setInterval(getData, 5000);
 </script>
 </head>
 <body>
+<iframe src="http://www.bmatraffic.com" width="0" height="0"></iframe>
+<div id="map-canvas" style="width: auto; height: 75%; width: 100%;"></div>
 </body>
 </html>
 
