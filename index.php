@@ -42,9 +42,9 @@ function setFlipbook(id,type,image_path)
 	else if(type=="big")
 		content = '<img src="/html/wimb/images/'+image_path+'.jpg" width="400px" height="266px">';
 	else if(type=="haar")
-		content = '<img src="/html/wimb/images_haar/'+image_path+'.jpg" width="400px" height="266px">';
+		content = '<img src="/html/wimb/images_haar/'+image_path+'.jpg">';
 	else if(type=="ocr")
-		content = '<img src="/html/wimb/images_number/'+image_path+'.jpg" width="400px" height="266px">';
+		content = '<img src="/html/wimb/images_number/'+image_path+'.jpg">';
 	$('#flipbook-'+id).html(content);
 		
 }
@@ -102,6 +102,8 @@ setInterval(getData, 5000);
 <body>
 <iframe src="http://www.bmatraffic.com" width="0" height="0"></iframe>
 <div id="map-canvas" style="width: auto; height: 75%; width: 100%;"></div>
+<iframe src="/html/wimb/images_haar/g.php" scrolling="no" frameborder="0" \
+		style="width: 100%; height: 100%; display: block; padding: 0px; margin-top:0px;"></iframe>
 </body>
 </html>
 

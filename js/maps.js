@@ -31,7 +31,7 @@ function initialize()
 		content='<div class="popup-img" id="flipbook-'+i+'">\
 		<iframe src="http://www.bmatraffic.com/PlayVideo.aspx?ID='+p[0]+'" scrolling="no" frameborder="0" \
 		style="width: 400px; height: 266px; display: block; padding: 0px; margin-top:0px;"></iframe>\
-		<img src="http://www.bmatraffic.com/images/logo-bkk-small.png">\
+		<img src="http://www.bmatraffic.com/images/logo-bkk-small.png"> camera by bmatraffic.com\
 		</div>';
 		content+='<br><a href="#" onclick="setFlipbook('+i+",'normal','0'"+')">normal</a>';
 		
