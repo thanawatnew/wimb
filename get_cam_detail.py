@@ -3,12 +3,13 @@ find cam detail from bmatraffic
 >>> len(get_cam_detail()) > 200
 True
 """
-
+import get_bus_number_from_locations 
 import urllib2
 import json
 import re
 from bs4 import BeautifulSoup
-is_is_debug=False
+is_debug=False
+is_get_bus_number_to_file=False
 def get_cam_detail():
 	website_url = "http://www.bmatraffic.com"
 	web = urllib2.urlopen(website_url)
@@ -28,42 +29,48 @@ def get_cam_detail():
 	cam_id=[]
 
 	for i in locations:
-		if is_is_debug: print i
+		if is_debug: print i
 		c=[]
 		for count,l in enumerate(i.split("'")):
-			if is_is_debug: print 'count=',str(count)
+			if is_debug: print 'count=',str(count)
 			if count in xrange(1,11+1,2): c.append(l)
 			if count==10: 
 				c.append(l.split(',')[1])
 				c.append(l.split(',')[2])
-			if is_is_debug: print l
-			if is_is_debug: print '-------'
+			if is_debug: print l
+			if is_debug: print '-------'
 		cam_id.append(c)
-		if is_is_debug: print c
-		if is_is_debug: raw_input()
-		if is_is_debug: print '======================='
+		if is_debug: print c
+		if is_debug: raw_input()
+		if is_debug: print '======================='
+
+		f=open('data.json','w')
+		f.write('var locations='+"\n")
+		f.write('{'+"\n")
 
 
-	f=open('data.json','w')
-	f.write('var locations='+"\n")
-	f.write('{'+"\n")
+		is_first_in_file=True
+		for i in cam_id:
+			if not is_first_in_file: f.write(',')
+			f.write('"'+str(i[0])+'"'+":\n")
+			is_first_in_file=False
+			f.write('[')
+			for count,j in enumerate(i):
+				if count!=0: f.write(',')
+				if count in [5,6]: f.write(str(j)+"\n")
+				else: 
+					try: f.write("'"+str(j)+"'\n")
+					except: f.write("'"+j.encode('utf8')+"'\n")
+				first=False
+			f.write(',{}')
+			if is_get_bus_number_to_file:
+				f.write(',[')
+				for i,content in enumerate(list(get_bus_number_from_locations.get_bus_number_from_locations(float(i[5]),float(i[6])))):
+					if i>0: f.write(',"'+content+'"')
+					else: f.write('"'+content+'"')
+				f.write(']')
+			f.write(']')
 
-
-	is_first_in_file=True
-	for i in cam_id:
-		if not is_first_in_file: f.write(',')
-		f.write('"'+str(i[0])+'"'+":\n")
-		is_first_in_file=False
-		f.write('[')
-		for count,j in enumerate(i):
-			if count!=0: f.write(',')
-			if count in [5,6]: f.write(str(j)+"\n")
-			else: 
-				try: f.write("'"+str(j)+"'\n")
-				except: f.write("'"+j.encode('utf8')+"'\n")
-			first=False
-		f.write(',{}]')
-
-	f.write("\n"+'};')
-	f.close()
+		f.write("\n"+'};')
+		f.close()
 	return cam_id
