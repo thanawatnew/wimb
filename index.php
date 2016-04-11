@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="UTF-8">
 <style>
 #listContainer{
   margin-top:15px;
@@ -27,7 +28,7 @@
 }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="data.json"></script>
+<script src="data.json" charset="UTF-8"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.6"></script>
 <script src="/html/wimb/js/maps.js" type="text/javascript"></script>
 <script>

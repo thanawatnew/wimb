@@ -56,7 +56,7 @@ function initialize()
 		var marker = new google.maps.Marker({
 			position: latlng,
 			map: map,
-			title: p[0]+' '+p[2],
+			title: p[0]+' '+p[1],
 			content: content
 		});
 	
