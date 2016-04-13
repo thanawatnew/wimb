@@ -34,6 +34,7 @@
 <script src="/html/wimb/bus_station.js" type="text/javascript" charset="UTF-8"></script>
 <script>
 //var data =[];
+var is_debug = false;
 function setFlipbook(id,type,image_path)
 {
 	if(type=="normal")
@@ -62,26 +63,49 @@ function getData() {
             //console.log(data.key1); // value for key1
             //or to list all values
             for(var key in data){
-		 if(!(data[key][0] in locations))
-		 {
-			console.log("error: not found cam_id = "+data[key][0]);
-			//locations[data[key]]={};
-			 //locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]={data[key][3]:{data[key][4]:data[key][5]}};
+				 if(!(data[key][0] in locations))
+				 {
+					console.log("error: not found cam_id = "+data[key][0]);
+					continue;
+					//locations[data[key]]={};
+					 //locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]={data[key][3]:{data[key][4]:data[key][5]}};
 
-		 }
-		 else if(!(data[key][1]+'_'+data[key][2] in locations[data[key][0]][8]))
-		 {
-			locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]={};
-			locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]]={};
-			locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
-		 }
-		 else if(!(data[key][3] in locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]))
-		 {
-			 locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]]={};
-			locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
-		 }
-		 else locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
-                 //console.log(data[key]);
+				 }
+				 else if(!(data[key][1]+'_'+data[key][2] in locations[data[key][0]][8]))
+				 {
+					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]={};
+					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]]={};
+					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
+				 }
+				 else if(!(data[key][3] in locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]))
+				 {
+					 locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]]={};
+					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
+				 }
+				 else locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
+						 //console.log(data[key]);
+				
+				/*
+				var bus_station_nearest = null;
+				var distance_nearest = 999999999;
+				for(var i=0;i<bus_station.length;i++)
+				{
+					if(is_debug) 
+					{
+						console.log('key = ');
+						console.log(key);
+						console.log('i = ');
+						console.log(i);
+					}
+					var distance_between = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(bus_station[i][2],bus_station[i][3]), new google.maps.LatLng(locations[data[key][0]][5],locations[data[key][0]][6]));
+					if( distance_between < distance_nearest )
+					{
+						bus_station_nearest = bus_station[i];
+						distance_nearest = distance_between;
+					}
+				}
+				locations[data[key][0]].push(bus_station_nearest)
+				//*/
             }
 		//data2=data;
 		console.log('downloaded data');
