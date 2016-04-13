@@ -8,8 +8,15 @@ import urllib2
 import json
 import re
 from bs4 import BeautifulSoup
+
+
+is_get_bus_number_to_file_by_siamtraffic = False
 is_debug=False
 is_get_bus_number_to_file=False
+if is_get_bus_number_to_file_by_siamtraffic:
+	import bus_station_list
+	import geopy
+	import geopy.distance
 def get_cam_detail():
 	website_url = "http://www.bmatraffic.com"
 	web = urllib2.urlopen(website_url)
@@ -55,9 +62,10 @@ def get_cam_detail():
 			f.write('"'+str(i[0])+'"'+":\n")
 			is_first_in_file=False
 			f.write('[')
+			lat,long = i[5],i[6]
 			for count,j in enumerate(i):
 				if count!=0: f.write(',')
-				if count in [5,6]: f.write(str(j)+"\n")
+				if count in [5,6]: f.write(str(j)+"\n") # lat,long position on gps
 				else: 
 					try: f.write("'"+str(j)+"'\n")
 					except: f.write("'"+j.encode('utf8')+"'\n")
@@ -69,7 +77,47 @@ def get_cam_detail():
 					if i>0: f.write(',"'+content+'"')
 					else: f.write('"'+content+'"')
 				f.write(']')
-			f.write(']')
+			
+			if is_get_bus_number_to_file_by_siamtraffic:
+				# TODO: add detect_nearest_bus_station function here
+				#f.write(',')
+				bus_station_list_to_file =  bus_station_list.bus_station_list
+				#ccoordinate_list = [(11.6702634, 72.313323), (11.6723698, 78.114523), (31.67342698, 78.465323), (12.6702634, 72.313323), (12.67342698, 75.465323)]
+				# id|station_id_siamtraffic|lat|lng|bus_no_set
+
+				ccoordinate_list =  bus_station_list_to_file #[ bus_station_list_to_file[i] for i in  bus_station_list_to_file.keys()]
+				coordinate = (lat,long)#(11.6723698, 78.114523)
+				# the solution
+				pts = [ [geopy.Point(p[2],p[3]),p] for p in ccoordinate_list ]
+				onept = geopy.Point(coordinate[0],coordinate[1])
+				alldist = [ (p[0],geopy.distance.distance(p[0], onept).km,p[1]) for p in pts ]
+				nearest_point = min(alldist, key=lambda x: (x[1]))[2] # or you can sort in by distance with sorted function
+				
+				key = nearest_point[0]
+				f.write('[')
+				f.write('"'+str(key)+'"') # id
+				f.write(',')
+				if is_debug: 
+					print 'nearest_point ='
+					print nearest_point
+				f.write(nearest_point[1]) #station_id_siamtraffic, don't need to add double quote because they're added already.
+				f.write(',')
+				
+				f.write(str(nearest_point[2])) #lat	
+				f.write(',')
+				f.write(str(nearest_point[3])) #long	
+				f.write(',')
+				
+				#bus_no_set
+				f.write('[')
+				for count,i in enumerate(nearest_point[4]):
+					if count>0: f.write(',')
+					try: f.write('"'+i.encode('utf8')+'"')
+					except: f.write('"'+i+'"')
+				f.write(']')
+				f.write(']')
+				
+				f.write(']')
 
 		f.write("\n"+'};')
 		f.close()
