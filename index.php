@@ -29,8 +29,9 @@
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="data.json" charset="UTF-8"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.6"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry"></script>
 <script src="/html/wimb/js/maps.js" type="text/javascript"></script>
+<script src="/html/wimb/bus_station.js" type="text/javascript" charset="UTF-8"></script>
 <script>
 //var data =[];
 function setFlipbook(id,type,image_path)
@@ -102,7 +103,8 @@ setInterval(getData, 5000);
 </head>
 <body>
 <iframe src="http://www.bmatraffic.com" width="0" height="0"></iframe>
-<div id="map-canvas" style="width: auto; height: 75%; width: 100%;"></div>
+<!--<div id="map-canvas" style="width: auto; height: 75%; width: 100%; border: 2px solid #73AD21"></div>-->
+<div id="map-canvas" style="width: auto; height: 75%; width: 100%; "></div>
 <iframe src="/html/wimb/images_haar/g.php" scrolling="no" frameborder="0" \
 		style="width: 100%; height: 100%; display: block; padding: 0px; margin-top:0px;"></iframe>
 </body>
