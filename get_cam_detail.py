@@ -117,7 +117,7 @@ def get_cam_detail():
 				f.write(']')
 				f.write(']')
 				
-				f.write(']')
+			f.write(']')
 
 		f.write("\n"+'};')
 		f.close()
