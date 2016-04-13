@@ -11,9 +11,8 @@ def detect_bus_number(path,file_name,file_type):
 	img2 = cv2.imread(path+'/images_haar/'+file_name+file_type,1)
 	if is_debug: print path+'/images_haar/'+file_name+file_type
 	
-	#equ = cv2.equalizeHist(img)
-    #res = np.hstack((img,equ)) #stacking images side-by-side
-	
+	img = cv2.equalizeHist(img)
+
 	#image_name="test.jpg"#288_20160217_162343_result_12.jpg"#262_20160115_172655_result_5.jpg"#307_20160104_172033.jpg"
 	try: color=img.copy()
 	except:
@@ -21,7 +20,8 @@ def detect_bus_number(path,file_name,file_type):
 		return None
 	#img = cv2.Canny(img,100,200)
 	img=img[0:img.shape[0]/2,0:img.shape[1]]
-	ret2,img = cv2.threshold(img,150,255,cv2.THRESH_BINARY)#+cv2.THRESH_OTSU)
+	#ret2,img = cv2.threshold(img,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+	ret2,img = cv2.threshold(img,200,255,cv2.THRESH_BINARY)#+cv2.THRESH_OTSU)
 	#img2=np.invert(img)
 	#cv2.imshow("threshold",img)
 	contour,hier = cv2.findContours(img.copy(),cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
