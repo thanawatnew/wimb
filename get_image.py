@@ -94,7 +94,8 @@ def get_pictures(cookies):
 					if is_debug: print output
 					continue
 				bus_detail = o[0].split('.')[0].split('_')
-				bus_result = o[1]
+				try: bus_result = o[1]
+				except: bus_result = ''
 				
 				f.write('"'+str(bus_detail[1])+'_'+str(bus_detail[2])+'_'+str(bus_detail[3])+'_'+str(bus_detail[4])+'":'+"\n")
 				f.write("[")
