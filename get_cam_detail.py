@@ -67,8 +67,8 @@ def get_cam_detail():
 				if count!=0: f.write(',')
 				if count in [5,6]: f.write(str(j)+"\n") # lat,long position on gps
 				else: 
-					try: f.write('"'+str(j)+"'\n")
-					except: f.write('"'+j.encode('utf8')+"'\n")
+					try: f.write('"'+str(j)+'"\n')
+					except: f.write('"'+j.encode('utf8')+'"\n')
 				first=False
 			f.write(',{}')
 			if is_get_bus_number_to_file:
