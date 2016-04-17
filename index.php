@@ -28,7 +28,8 @@
 }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="data.json" charset="UTF-8"></script>
+<script src="result_data_aggregate_bus_station_siamtraffic.js" charset="UTF-8"></script><!---->
+<!--<script src="data.json" charset="UTF-8"></script><!---->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry"></script>
 <script src="/html/wimb/js/maps.js" type="text/javascript"></script>
 <script src="/html/wimb/bus_station.js" type="text/javascript" charset="UTF-8"></script>
@@ -60,10 +61,15 @@ function getData() {
         contentType: 'json',
 	dataType:'json',
         success: function (data){
+
             //console.log(data.key1); // value for key1
             //or to list all values
             for(var key in data){
-				 if(!(data[key][0] in locations))
+				console.log('key = ');
+				console.log(key);
+				console.log('data[key] = ');
+				console.log(data[key]);
+				 if(!(data[key][0] in Object(locations)))
 				 {
 					console.log("error: not found cam_id = "+data[key][0]);
 					continue;
@@ -71,13 +77,13 @@ function getData() {
 					 //locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]={data[key][3]:{data[key][4]:data[key][5]}};
 
 				 }
-				 else if(!(data[key][1]+'_'+data[key][2] in locations[data[key][0]][8]))
+				 else if(!(data[key][1]+'_'+data[key][2] in Object(locations[data[key][0]][8])))
 				 {
 					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]={};
 					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]]={};
 					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
 				 }
-				 else if(!(data[key][3] in locations[data[key][0]][8][data[key][1]+'_'+data[key][2]]))
+				 else if(!(data[key][3] in Object(locations[data[key][0]][8][data[key][1]+'_'+data[key][2]])))
 				 {
 					 locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]]={};
 					locations[data[key][0]][8][data[key][1]+'_'+data[key][2]][data[key][3]][data[key][4]]=data[key][5];
@@ -122,7 +128,7 @@ function getData() {
 	
 }
 getData();
-setInterval(getData, 5000);
+//setInterval(getData, 5000);
 </script>
 </head>
 <body>
