@@ -38,7 +38,7 @@ def get_cam_detail():
 	for i in locations:
 		if is_debug: print i
 		c=[]
-		for count,l in enumerate(i.split('"')):
+		for count,l in enumerate(i.split("'")):
 			if is_debug: print 'count=',str(count)
 			if count in xrange(1,11+1,2): c.append(l)
 			if count==10: 
@@ -67,8 +67,8 @@ def get_cam_detail():
 				if count!=0: f.write(',')
 				if count in [5,6]: f.write(str(j)+"\n") # lat,long position on gps
 				else: 
-					try: f.write('"'+str(j)+'"\n')
-					except: f.write('"'+j.encode('utf8')+'"\n')
+					try: f.write("'"+str(j)+"'\n")
+					except: f.write("'"+j.encode('utf8')+"'\n")
 				first=False
 			f.write(',{}')
 			if is_get_bus_number_to_file:
@@ -119,6 +119,6 @@ def get_cam_detail():
 				
 			f.write(']')
 
-		f.write("\n"+'}')
+		f.write("\n"+'};')
 		f.close()
 	return cam_id
