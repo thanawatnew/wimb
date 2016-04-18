@@ -45,6 +45,7 @@ def check_init_files_and_folders():
 	'images_haar',
 	'images_haar_result',
 	'images_number',
+	'images_number_result',
 	'models',
 	'images_old',
 	'text_number',
@@ -65,19 +66,28 @@ while True:
 	check_init_files_and_folders()
 	starttime=time.time()
 	#get_image.get_pictures()
-	while time.time()-starttime<5*60: # less than five minutes, just keep taking and processing pictures
+	while time.time()-starttime<15*60: # less than five minutes, just keep taking and processing pictures
 		get_image.get_pictures(get_image.get_cookie(url)) #set first parameter in seconds
 		time.sleep(5)
 	directory_list=[
 	'images',
-	'images_haar',
-	'images_haar_result',
-	'images_number',
-	'text_number',
+	#'images_haar',
+	#'images_haar_result',
+	#'images_number',
+	#'text_number',
 	]
 	timestr = time.strftime("%Y%m%d_%H%M%S")
 	for directory_name in directory_list: 
 		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
+	directory_list=[
+	'images_haar',
+	'images_haar_result',
+	'images_number',
+	'images_number_result',
+	'text_number',
+	]
+	for directory_name in directory_list: 
+		shutil.rmtree(directory_name)
 	shutil.move('data.json',"images_old/"+'data'+'_'+timestr+'.json')
 	shutil.move('buses.json',"images_old/"+'buses'+'_'+timestr+'.json')
 		
