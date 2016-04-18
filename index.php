@@ -50,7 +50,7 @@ function setFlipbook(id,type,image_path)
 		<img src="http://www.bmatraffic.com/images/logo-bkk-small.png">\
 		';
 	else if(type=="big")
-		content = '<img src="/html/wimb/images/'+image_path+'.jpg" width="400px" height="266px">';
+		content = '<img src="/html/wimb/images_haar_result/'+image_path+'_result.jpg" width="400px" height="266px">';
 	else if(type=="haar")
 		content = '<img src="/html/wimb/images_haar/'+image_path+'.jpg">';
 	else if(type=="ocr")
@@ -144,6 +144,7 @@ $(document).ready(function() {
               $('.owl-carousel').owlCarousel({
                 loop: true,
                 margin: 10,
+				//autoWidth:true,
                 responsiveClass: true,
                 responsive: {
                   0: {
