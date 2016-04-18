@@ -1,3 +1,4 @@
+
 function prepareList() {
   $('#expList').find('li:has(ul)')
   	.click( function(event) {
@@ -51,13 +52,16 @@ function initialize()
 				 
 			}
 		}
-		
+		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5) feature_type = 'bus_green.png';
+		else if(parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<10) feature_type = 'bus_yellow.png';
+		else feature_type = 'bus_red.png';
         content+='</ul></li></ul></div>';
 		var marker = new google.maps.Marker({
 			position: latlng,
 			map: map,
 			title: p[0]+' '+p[1],
-			content: content
+			content: content,
+			icon: '/html/wimb/img/' + feature_type
 		});
 	
 		google.maps.event.addListener(marker, 'click', function() {
@@ -96,12 +100,19 @@ var content = '<div class="owl-item" id="'+j+'">' + html + '</div>';
 var innerDiv = document.createElement('div');
   //var title = marker.getTitle();
 innerDiv.className = 'owl-item';
-innerDiv.innerHTML =  '<img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg" onclick="#map-canvas">';
+innerDiv.innerHTML =  '<a href="#map-canvas"><img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg"></a>';
   //li.innerHTML = title;
 //carousel.appendChild(innerDiv);
 
 var carousel = document.getElementById(i+'_'+j+'_result_'+k+'.jpg');
+try
+{
 carousel.appendChild(innerDiv);
+}
+catch(err)
+{
+location.reload();
+}
 
   //ul.appendChild(li);
   //*/
