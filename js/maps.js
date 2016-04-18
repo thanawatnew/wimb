@@ -67,10 +67,50 @@ function initialize()
 			
 		});
 		
+		createMarkerButton(marker,i);	
 	}
-	
 	map.fitBounds(bounds);
 	
 }
+function createMarkerButton(marker,i) {
+//
+  //Creates a sidebar button
+ // var ul = document.getElementById("marker_list");
+  //var li = document.createElement("li");
+//var carousel= document.getElementById("gallery");
+//var carousel= document.getElementsByClassName("owl-stage")[0];
+var p = locations[i];
+for(var j in p[8])
+{
+for(var k in p[8][j])
+{
+/*
+var owl = $('.owl-carousel');
 
+var html = '<img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg" height="15%" width="15%" onclick="#map-canvas">';//'<div class="item"><h4>N1</h4></div>';
+var content = '<div class="owl-item" id="'+j+'">' + html + '</div>';
+    owl.trigger('add.owl.carousel', [$(content)])
+        .trigger('refresh.owl.carousel').trigger('next.owl.carousel');
+		var innerDiv = document.getElementById(j);
+//*/	
+var innerDiv = document.createElement('div');
+  //var title = marker.getTitle();
+innerDiv.className = 'owl-item';
+innerDiv.innerHTML =  '<img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg" onclick="#map-canvas">';
+  //li.innerHTML = title;
+//carousel.appendChild(innerDiv);
+
+var carousel = document.getElementById(i+'_'+j+'_result_'+k+'.jpg');
+carousel.appendChild(innerDiv);
+
+  //ul.appendChild(li);
+  //*/
+  //Trigger a click event to marker when the button is clicked.
+  google.maps.event.addDomListenerOnce(innerDiv, "click", function(){
+    google.maps.event.trigger(marker, "click");
+  });
+  }
+}
+  
+}
 google.maps.event.addDomListener(window, 'load', initialize);

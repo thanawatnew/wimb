@@ -1,6 +1,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/html/wimb/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="/html/wimb/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="/html/wimb/assets/docs.theme.min.css">
+
 <style>
 #listContainer{
   margin-top:15px;
@@ -33,6 +37,8 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry"></script>
 <script src="/html/wimb/js/maps.js" type="text/javascript"></script>
 <script src="/html/wimb/bus_station.js" type="text/javascript" charset="UTF-8"></script>
+<script src="/html/wimb/js/owl.carousel.min.js"></script>
+
 <script>
 //var data =[];
 var is_debug = false;
@@ -65,10 +71,13 @@ function getData() {
             //console.log(data.key1); // value for key1
             //or to list all values
             for(var key in data){
-				console.log('key = ');
-				console.log(key);
-				console.log('data[key] = ');
-				console.log(data[key]);
+				if(is_debug)
+				{
+					console.log('key = ');
+					console.log(key);
+					console.log('data[key] = ');
+					console.log(data[key]);
+				}
 				 if(!(data[key][0] in Object(locations)))
 				 {
 					console.log("error: not found cam_id = "+data[key][0]);
@@ -127,14 +136,103 @@ function getData() {
 		//return data2;
 	
 }
+
 getData();
 //setInterval(getData, 5000);
+$(document).ready(function() {
+	
+              $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                  0: {
+                    items: 1,
+                    nav: true
+                  },
+                  600: {
+                    items: 3,
+                    nav: false
+                  },
+                  1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false,
+                    margin: 20
+                  }
+                }
+              })
+            })
+
 </script>
 </head>
 <body>
 <iframe src="http://www.bmatraffic.com" width="0" height="0"></iframe>
 <!--<div id="map-canvas" style="width: auto; height: 75%; width: 100%; border: 2px solid #73AD21"></div>-->
 <div id="map-canvas" style="width: auto; height: 75%; width: 100%; "></div>
+<div class="row">
+        <div class="large-12 columns">
+          <div class="owl-carousel" id="gallery" style="width:100%;">
+		  <?php
+		  
+		  if ($handle = opendir('images_haar')) {
+
+    while (false !== ($entry = readdir($handle))) {
+
+        if ($entry != "." && $entry != ".." && $entry != "g.php") {
+			echo '<div class="item" id="'.$entry.'">'."\n";
+			//echo "<img src='./images_haar/$entry' height='15%' width='15%'>\n";
+			echo "</div>\n";
+            //echo "$entry\n";
+        }
+    }
+
+    closedir($handle);
+}
+
+//*/
+?>
+<!--
+            <div class="item">
+              <h4>1</h4>
+            </div>
+            <div class="item">
+              <h4>2</h4>
+            </div>
+            <div class="item">
+              <h4>3</h4>
+            </div>
+            <div class="item">
+              <h4>4</h4>
+            </div>
+            <div class="item">
+              <h4>5</h4>
+            </div>
+            <div class="item">
+              <h4>6</h4>
+            </div>
+            <div class="item">
+              <h4>7</h4>
+            </div>
+            <div class="item">
+              <h4>8</h4>
+            </div>
+            <div class="item">
+              <h4>9</h4>
+            </div>
+            <div class="item">
+              <h4>10</h4>
+            </div>
+            <div class="item">
+              <h4>11</h4>
+            </div>
+            <div class="item">
+              <h4>12</h4>
+            </div>
+			-->
+          </div>
+		</div>
+</div>
 <iframe src="/html/wimb/images_haar/g.php" scrolling="no" frameborder="0" \
 		style="width: 100%; height: 100%; display: block; padding: 0px; margin-top:0px;"></iframe>
 </body>
