@@ -1,3 +1,22 @@
+function reg(input) {
+    var flags;
+    //could be any combination of 'g', 'i', and 'm'
+    flags = 'gi';
+    return new RegExp(input,flags)//('ReGeX' + input + 'ReGeX', flags);
+}
+String.prototype.matchAll = function(regexp) {
+// By Chris West
+  var matches = [];
+  this.replace(regexp, function() {
+    var arr = ([]).slice.call(arguments, 0);
+    var extras = arr.splice(-2);
+    arr.index = extras[0];
+    arr.input = extras[1];
+    matches.push(arr);
+  });
+  return matches.length ? matches : null;
+};
+
 
 function prepareList() {
   $('#expList').find('li:has(ul)')
@@ -48,8 +67,23 @@ function initialize()
 				
 				content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'haar','"+i+'_'+j+'_result_'+k+"')"+'"'+">"+j+'<ul>';
 				for(var l in p[8][j][k])
-					content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'ocr','"+i+'_'+j+'_result_'+k+'_result_number_'+l+"')"+'"'+">"+j+'_'+k+'_'+l+': '+p[8][j][k][l]+'<ul>';
-				 
+				{
+					content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'ocr','"+i+'_'+j+'_result_'+k+'_result_number_'+l+"')"+'"'+">"+j+'_'+k+'_'+l+': ';
+var str = p[9][0][4]+','+p[9][1][4];
+var regexp = reg('[^,]\w{0,5}5\w{0,5}[^,]') 
+var bus_number_list = str.matchAll(regexp);
+//console.log(bus_number_list);
+is_first_bus_number=true;
+for (var count_bus_number=0;count_bus_number<Object(bus_number_list).length;count_bus_number++)
+{
+console.log(bus_number_list[count_bus_number]);
+if(count_bus_number>0) content+=',';
+content+=bus_number_list[count_bus_number][0];
+is_first_bus_number=false;
+}
+content+='<ul>';
+//+p[8][j][k][l]+'<ul>';
+				} 
 			}
 		}
 		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5) feature_type = 'bus_green.png';
