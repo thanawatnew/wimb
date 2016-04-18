@@ -24,6 +24,7 @@ def detect_bus_number(path,file_name,file_type):
 	ret2,img = cv2.threshold(img,200,255,cv2.THRESH_BINARY)#+cv2.THRESH_OTSU)
 	#img2=np.invert(img)
 	#cv2.imshow("threshold",img)
+	img_result=img2.copy()
 	contour,hier = cv2.findContours(img.copy(),cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
 	screenCnt = None
 	count_file_saved=0
@@ -39,9 +40,11 @@ def detect_bus_number(path,file_name,file_type):
 			if is_debug: print x,y,w,h
 			# break
 			roi = img[y:y+h,x:x+w]
+			cv2.rectangle(img_result, (x, y), (x+w, y+h), (255,0,0), 2)
 			cv2.imwrite(path+'/images_number/'+file_name+'_result_number_'+str(count_file_saved)+file_type, roi);
 			if is_ocr: subprocess.call(["tesseract",path+'/images_number/'+file_name+'_result_number_'+str(count_file_saved)+file_type,path+'/text_number/'+file_name+'_result_number_'+str(count_file_saved),'-psm','7','digits','nobatch'],stdout=open(os.devnull, 'wb'),stderr=subprocess.STDOUT)
 	cv2.imwrite(path+'/images_number/'+file_name+file_type,img)
+	cv2.imwrite(path+'/images_number_result/'+file_name+'_result'+file_type, img_result);
 	if is_debug: print 'amount of contour in this picture: '+str(len(contour))
 	return img
 
