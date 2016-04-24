@@ -4,8 +4,13 @@
 <link rel="stylesheet" href="/html/wimb/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="/html/wimb/assets/owl.theme.default.min.css">
 <link rel="stylesheet" href="/html/wimb/assets/docs.theme.min.css">
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <style>
+#accordion-resizer {
+    padding: 10px;
+    width: 350px;
+    height: 220px;
+  }
 #listContainer{
   margin-top:15px;
 }
@@ -33,15 +38,31 @@
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="result_data_aggregate_bus_station_siamtraffic.js" charset="UTF-8"></script><!---->
-<!--<script src="data.json" charset="UTF-8"></script><!---->
+<!--<script src="data.json" charset="UTF-8"></script>--->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=geometry"></script>
 <script src="/html/wimb/js/maps.js" type="text/javascript"></script>
 <script src="/html/wimb/bus_station.js" type="text/javascript" charset="UTF-8"></script>
 <script src="/html/wimb/js/owl.carousel.min.js"></script>
+<script src="/html/wimb/js/moment.min.js"></script>
 
+ <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
 //var data =[];
 var is_debug = false;
+$(function() {
+    $( ".accordion" ).accordion({
+      heightStyle: "fill"
+    });
+  });
+  $(function() {
+    $( ".accordion-resizer" ).resizable({
+      minHeight: 140,
+      minWidth: 200,
+      resize: function() {
+        $( ".accordion" ).accordion( "refresh" );
+      }
+    });
+  });
 function setFlipbook(id,type,image_path)
 {
 	if(type=="normal")
@@ -52,7 +73,7 @@ function setFlipbook(id,type,image_path)
 	else if(type=="big")
 		content = '<img src="/html/wimb/images_haar_result/'+image_path+'_result.jpg" width="400px" height="266px">';
 	else if(type=="haar")
-		content = '<img src="/html/wimb/images_haar/'+image_path+'.jpg">';
+		content = '<img src="/html/wimb/images_number_result/'+image_path+'_result.jpg">';
 	else if(type=="ocr")
 		content = '<img src="/html/wimb/images_number/'+image_path+'.jpg">';
 	$('#flipbook-'+id).html(content);
@@ -137,6 +158,7 @@ function getData() {
 	
 }
 
+
 getData();
 //setInterval(getData, 5000);
 $(document).ready(function() {
@@ -170,7 +192,7 @@ $(document).ready(function() {
 <body>
 <iframe src="http://www.bmatraffic.com" width="0" height="0"></iframe>
 <!--<div id="map-canvas" style="width: auto; height: 75%; width: 100%; border: 2px solid #73AD21"></div>-->
-<div id="map-canvas" style="width: auto; height: 75%; width: 100%; "></div>
+<div id="map-canvas" style="width: auto; height: 65%; width: 100%; "></div>
 <div class="row">
         <div class="large-12 columns">
           <div class="owl-carousel" id="gallery" style="width:100%;">
