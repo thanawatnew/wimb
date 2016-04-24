@@ -34,12 +34,39 @@ function prepareList() {
   $(document).ready( function() {
       prepareList();
   });
+
+function setUserAgent(window, userAgent) {
+    if (window.navigator.userAgent != userAgent) {
+        var userAgentProp = { get: function () { return userAgent; } };
+        try {
+            Object.defineProperty(window.navigator, 'userAgent', userAgentProp);
+        } catch (e) {
+            window.navigator = Object.create(navigator, {
+                userAgent: userAgentProp
+            });
+        }
+    }
+}
+var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+if(isTouch)
+{
+var userAgent='Mozilla/5.0 (Linux; Android 5.1.1; Nexus 4 Build/LMY48T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.105 Mobile Safari/537.36';//'Mozilla/5.0 (Linux; U; Android 4.2; en-us; Nexus 4 Build/JOP24G) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30';
+setUserAgent(window, userAgent);
+//setUserAgent(document.querySelector('map-canvas').contentWindow, userAgent);
+//setUserAgent(document.querySelector('iframe').contentWindow, 'Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36');
+console.log('this device is touch-enabled');
+}
+console.log(navigator.userAgent); // returns 'agent'
+function fnChangeBorder(index){
+	document.getElementById(index).children[0].children[0].children[0].src="/html/wimb/img/black.jpg";//.style.borderColor="#00FF00";
+}
 function initialize()
 {
 	var map = 
 	    new google.maps.Map(document.getElementById('map-canvas'));
 	var bounds = new google.maps.LatLngBounds();
 	var infowindow = new google.maps.InfoWindow();
+	//getLocation(map);
 	var count=0;
 	for (var i in locations)
 	{
@@ -53,22 +80,23 @@ function initialize()
 		style="width: 400px; height: 266px; display: block; padding: 0px; margin-top:0px;"></iframe>\
 		<img src="http://www.bmatraffic.com/images/logo-bkk-small.png"> camera by bmatraffic.com\
 		</div>';
-		content+='<br><a href="#" onclick="setFlipbook('+i+",'normal','0'"+')">normal</a>';
+		content+='<br><a href="#" onclick="setFlipbook('+i+",'normal','0'"+')">Real time feed</a>';
 		
-		content+='<br><div id="listContainer"><ul id="expList">';
+		//content+='<br><div id="listContainer"><ul id="expList">';
+		content+='<div class="ui-widget-content accordion-resizer"><div  class="accordion">';
 		for(var j in p[8])
 		{
 			
     
 			//content+='<li><a href="#" class="hide" data-toggle="#list">'+j+'</a><ul class="out" id="list">';
-			content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'big','"+i+'_'+j+"')"+'"'+">"+j+'<ul>';
+			content+='<h3><a href="#" onclick="'+"setFlipbook("+i+",'big','"+i+'_'+j+"')"+'"'+">"+"Full picture: "+j+'</a></h3><div><ul>';
 			for(var k in p[8][j])
 			{
 				
-				content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'haar','"+i+'_'+j+'_result_'+k+"')"+'"'+">"+j+'<ul>';
+				content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'haar','"+i+'_'+j+'_result_'+k+"')"+'"'+">"+"Cropped picture: "+j+'</a></li>';
 				for(var l in p[8][j][k])
 				{
-					content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'ocr','"+i+'_'+j+'_result_'+k+'_result_number_'+l+"')"+'"'+">"+j+'_'+k+'_'+l+': ';
+					content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'ocr','"+i+'_'+j+'_result_'+k+'_result_number_'+l+"')"+'"'+">Result picture: "+j+'_'+k+'_'+l+': ';
 var str = p[9][0][4]+','+p[9][1][4];
 var regexp = reg('[^,]\w{0,5}5\w{0,5}[^,]') 
 var bus_number_list = str.matchAll(regexp);
@@ -81,11 +109,13 @@ if(count_bus_number>0) content+=',';
 content+=bus_number_list[count_bus_number][0];
 is_first_bus_number=false;
 }
-content+='<ul>';
+content+='</li>';
 //+p[8][j][k][l]+'<ul>';
 				} 
 			}
+			content+='</div>';
 		}
+		content+='</div></div>';
 		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5) feature_type = 'bus_green.png';
 		else if(parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<10) feature_type = 'bus_yellow.png';
 		else feature_type = 'bus_red.png';
@@ -108,6 +138,12 @@ content+='<ul>';
 		createMarkerButton(marker,i);	
 	}
 	map.fitBounds(bounds);
+	var listener = google.maps.event.addListener(map, "idle", function() { 
+  	//if (map.getZoom() > 16) map.setZoom(16); 
+  	map.setZoom(13);
+	google.maps.event.removeListener(listener); 
+	});
+	//if (map.getZoom() < 16) map.setZoom(16); 
 	
 }
 function createMarkerButton(marker,i) {
@@ -134,7 +170,7 @@ var content = '<div class="owl-item" id="'+j+'">' + html + '</div>';
 var innerDiv = document.createElement('div');
   //var title = marker.getTitle();
 innerDiv.className = 'owl-item';
-innerDiv.innerHTML =  '<a href="#map-canvas"><img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg"></a>';
+innerDiv.innerHTML =  '<a href="#map-canvas"><img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg" <!--onClick="'+"fnChangeBorder('"+i+'_'+j+'_result_'+k+".jpg')"+'" --></a>';
   //li.innerHTML = title;
 //carousel.appendChild(innerDiv);
 
