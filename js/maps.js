@@ -116,8 +116,8 @@ content+='</li>';
 			content+='</div>';
 		}
 		content+='</div></div>';
-		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5) feature_type = 'bus_green.png';
-		else if(parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<10) feature_type = 'bus_yellow.png';
+		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5 && moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[1]=="minutes") feature_type = 'bus_green.png';
+		else if(parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<10 && moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[1]=="minutes") feature_type = 'bus_yellow.png';
 		else feature_type = 'bus_red.png';
         content+='</ul></li></ul></div>';
 		var marker = new google.maps.Marker({
