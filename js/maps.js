@@ -129,7 +129,7 @@ content+='</li>';
 			content+='</div>';
 		}
 		content+='</div></div>';
-		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5 && moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[1]=="minutes") feature_type = 'bus_green.png';
+		if(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0]=="a" || parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<5 && moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[1]=="minutes" || moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[1]=="minute"  || moment(j, "YYYYMMDD_hhmmss").fromNow()=="a few seconds ago" ||  moment(j, "YYYYMMDD_hhmmss").fromNow()=="in a few seconds" ||  moment(j, "YYYYMMDD_hhmmss").fromNow()=="in a minute") feature_type = 'bus_green.png';
 		else if(parseInt(moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[0])<10 && moment(j, "YYYYMMDD_hhmmss").fromNow().split(' ')[1]=="minutes") feature_type = 'bus_yellow.png';
 		else feature_type = 'bus_red.png';
         content+='</ul></li></ul></div>';
@@ -195,7 +195,8 @@ carousel.appendChild(innerDiv);
 }
 catch(err)
 {
-location.reload();
+//location.reload();
+
 }
 
   //ul.appendChild(li);
