@@ -1,3 +1,33 @@
+function smoothZoom (map, level, cnt, mode) {
+		//alert('Count: ' + cnt + 'and Max: ' + level);
+
+		// If mode is zoom in
+		if(mode == true) {
+
+			if (cnt >= level) {
+				return;
+			}
+			else {
+				var z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+					google.maps.event.removeListener(z);
+					smoothZoom(map, level, cnt + 1, true);
+				});
+				setTimeout(function(){map.setZoom(cnt)}, 350);
+			}
+		} else {
+			if (cnt <= level) {
+				return;
+			}
+			else {
+				var z = google.maps.event.addListener(map, 'zoom_changed', function(event) {
+					google.maps.event.removeListener(z);
+					smoothZoom(map, level, cnt - 1, false);
+				});
+				setTimeout(function(){map.setZoom(cnt)}, 350);
+			}
+		}
+	}   
+/*
 // the smooth zoom function
 function smoothZoom (map, max, cnt) {
     if (cnt >= max) {
@@ -10,7 +40,7 @@ function smoothZoom (map, max, cnt) {
         });
         setTimeout(function(){map.setZoom(cnt)}, 500); // 80ms is what I found to work well on my system -- it might not work well on all systems
     }
-}
+}//*/
 function reg(input) {
     var flags;
     //could be any combination of 'g', 'i', and 'm'
@@ -153,7 +183,7 @@ content+='</li>';
 	map.fitBounds(bounds);
 	var listener = google.maps.event.addListener(map, "idle", function() { 
   	//if (map.getZoom() > 16) map.setZoom(16);
-	smoothZoom(map, 15, map.getZoom()); 
+	smoothZoom(map, 15, map.getZoom(),true); 
   	//map.setZoom(15);
 	google.maps.event.removeListener(listener); 
 	});
