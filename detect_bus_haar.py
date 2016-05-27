@@ -9,6 +9,7 @@ path=os.path.abspath('.')
 file_type='.jpg'
 is_ocr=False
 is_debug=True
+is_bgs = True
 #file_name = 'rgb_20160112_123002'
 def detect(img,cascade):
 	rects = cascade.detectMultiScale(img, 1.3, 4, cv2.CASCADE_SCALE_IMAGE, (24,24))
@@ -32,6 +33,20 @@ def box(rects, img,img2,img3,img4,path,file_name,file_type,is_detect_bus_number)
 		crop_img=img_original[y1:y2,x1:x2]
 		if is_ocr: crop_img_ocr_0=img_ocr_0[y1:size_y+y1,x1:x2]
 		if is_ocr: crop_img_ocr_1=img_ocr_1[y1:size_y+y1,x1:x2]
+		if is_bgs and os.path.isfile(path+'/models/images_bgs_model_median/'+file_name.split('_')[0]+'_model_median'+file_type):
+			call([path+'/get_DPMeanBGS_mask',path+'/images/'+file_name+file_type,path+'/models/images_bgs_model_median/'+file_name.split('_')[0]+'_model_median'+file_type,path+'/images_bgs_mask/'+file_name+'_bgs_mask'+file_type],stdout=open(os.devnull, 'wb'),stderr=subprocess.STDOUT)
+			img_bgs_mask = cv2.imread(path+'/images_bgs_mask/'+file_name+'_bgs_mask'+file_type,0)
+			ret,img_bgs_mask_2 = cv2.threshold(img_bgs_mask,200,255,cv2.THRESH_BINARY)
+			isWhite=False
+			for i in xrange(len(img)):
+				for j in xrange(len(img[i])):
+					if img_bgs_mask_2[i][j]==255:
+						isWhite=True
+						break
+				if isWhite: break
+			if not isWhite: 
+				continue # bgs unable to detect the moving object, so it skipped this cropped box 
+				
 		cv2.rectangle(img, (x1, y1), (x2, y2), (127, 255, 0), 2)
 		cv2.imwrite(path+'/images_haar/'+file_name+'_result_'+str(count)+file_type, crop_img)
 		if is_detect_bus_number: 
@@ -76,7 +91,7 @@ def detect_bus_haar(path,file_name,file_type,is_ocr,cascade):
 	 #cv2.imshow("frame", img)
 def detect_bus_haar_group(path):
 	count=0#0+215-1
-	cascade = cv2.CascadeClassifier(path+"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_bus_front_130_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml") #"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#/cascade_front_30_stage_wrong.xml")#cascade_30_stages_1000_pos_3000_neg.xml")#cascade_front_30_stage_wrong.xml") #"cascade_front_19_stage_1000_pos_3000_neg.xml")#"/cascade_front_30_stage_wrong.xml")
+	cascade = cv2.CascadeClassifier(path+"/models/cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#cascade_bus_front_175_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_bus_front_130_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml") #"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#/cascade_front_30_stage_wrong.xml")#cascade_30_stages_1000_pos_3000_neg.xml")#cascade_front_30_stage_wrong.xml") #"cascade_front_19_stage_1000_pos_3000_neg.xml")#"/cascade_front_30_stage_wrong.xml")
 	for file_name_with_extension in os.listdir(path+'/images/')[count:]:
 	 count+=1
 	 if is_debug: print 'progress = '+str(count)+'/'+str(len(os.listdir(path+'/images/')))+' '+str(count*100.0/len(os.listdir(path+'/images/')))
@@ -120,6 +135,7 @@ def check_init_files_and_folders():
 	'images',
 	'images_haar',
 	'images_haar_result',
+	'images_bgs_mask',
 	'images_number',
 	'images_number_result',
 	'models',
@@ -137,3 +153,31 @@ def check_init_files_and_folders():
 if __name__ == "__main__":
 	check_init_files_and_folders()
 	detect_bus_haar_group(path)
+	output_process = subprocess.Popen(["/bin/grep","-r",'.','text_number'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+	outputs = output_process.stdout.read().split('\n')
+	f=open('buses.json','w')
+	f.write('{'+"\n")
+	is_first =True
+	for output in outputs:
+		try: 
+			o=output.split('/')[1].split(':')
+			if not is_first: f.write(',')
+			else: is_first = False
+		except:
+			if is_debug: print output
+			continue
+		bus_detail = o[0].split('.')[0].split('_')
+		try: bus_result = o[1]
+		except: bus_result = ''
+		
+		f.write('"'+str(bus_detail[1])+'_'+str(bus_detail[2])+'_'+str(bus_detail[3])+'_'+str(bus_detail[4])+'":'+"\n")
+		f.write("[")
+		for i in [0,1,2,4,7]:
+			try: 
+				f.write('"'+str(bus_detail[i])+'"')
+				f.write(',')
+			except: pass
+		f.write('"'+str(bus_result[0])+'"')
+		f.write("]\n")
+	f.write('}'+"\n")
+	f.close()
