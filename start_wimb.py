@@ -42,6 +42,9 @@ def check_init_files_and_folders():
 	]
 	directory_list=[
 	'images',
+	'images_bgs',
+	'images_bgs_mask',
+	#'images_bgs_result',
 	'images_haar',
 	'images_haar_result',
 	'images_number',
@@ -80,6 +83,9 @@ while True:
 	for directory_name in directory_list: 
 		shutil.move(directory_name,"images_old/"+directory_name+'_'+timestr)
 	directory_list=[
+	'images_bgs',
+	'images_bgs_mask',
+	#'images_bgs_result',
 	'images_haar',
 	'images_haar_result',
 	'images_number',
