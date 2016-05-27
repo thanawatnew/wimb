@@ -141,10 +141,13 @@ function initialize()
 				{
 					content+='<li><a href="#" onclick="'+"setFlipbook("+i+",'ocr','"+i+'_'+j+'_result_'+k+'_result_number_'+l+"')"+'"'+">Result picture: "+j+'_'+k+'_'+l+': ';
 var str = p[9][0][4]+','+p[9][1][4];
-var regexp = reg('[^,]\w{0,5}5\w{0,5}[^,]') 
+var regexp = reg('[^,]\w{0,5}'+p[8][j][k][l]+'\w{0,5}[^,]') 
 var bus_number_list = str.matchAll(regexp);
 //console.log(bus_number_list);
 is_first_bus_number=true;
+console.log("str");
+console.log(str);
+console.log("bus_number_list");
 for (var count_bus_number=0;count_bus_number<Object(bus_number_list).length;count_bus_number++)
 {
 console.log(bus_number_list[count_bus_number]);
@@ -152,6 +155,7 @@ if(count_bus_number>0) content+=',';
 content+=bus_number_list[count_bus_number][0];
 is_first_bus_number=false;
 }
+if(is_first_bus_number) content+="ALL: "+str;
 content+='</li>';
 //+p[8][j][k][l]+'<ul>';
 				} 
@@ -214,7 +218,7 @@ var content = '<div class="owl-item" id="'+j+'">' + html + '</div>';
 var innerDiv = document.createElement('div');
   //var title = marker.getTitle();
 innerDiv.className = 'owl-item';
-innerDiv.innerHTML =  '<a href="#map-canvas"><img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg" <!--onClick="'+"fnChangeBorder('"+i+'_'+j+'_result_'+k+".jpg')"+'" --></a>';
+innerDiv.innerHTML =  '<a href="#map-canvas"><img src="/html/wimb/images_haar/'+i+'_'+j+'_result_'+k+'.jpg" onclick="$('+"'"+'.owl-carousel'+"'"+').trigger('+"'"+'to.owl.carousel'+"'"+', [20, 1000000, true])"></a>';
   //li.innerHTML = title;
 //carousel.appendChild(innerDiv);
 
@@ -232,7 +236,8 @@ catch(err)
   //ul.appendChild(li);
   //*/
   //Trigger a click event to marker when the button is clicked.
-  google.maps.event.addDomListenerOnce(innerDiv, "click", function(){
+  google.maps.event.addDomListener(innerDiv, "click", function(){
+	$('.owl-carousel').trigger('to.owl.carousel', [5, 1000000, true]);
     google.maps.event.trigger(marker, "click");
   });
   }
