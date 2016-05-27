@@ -164,7 +164,7 @@ getData();
 $(document).ready(function() {
 	
               $('.owl-carousel').owlCarousel({
-                loop: true,
+                loop: false,
                 margin: 10,
 				//autoWidth:true,
                 responsiveClass: true,
@@ -199,15 +199,16 @@ $(document).ready(function() {
 		  <?php
 		  
 		  if ($handle = opendir('images_haar')) {
-
+$count_picture = 0;
     while (false !== ($entry = readdir($handle))) {
 
         if ($entry != "." && $entry != ".." && $entry != "g.php") {
-			echo '<div class="item" id="'.$entry.'">'."\n";
+			echo '<div class="item" id="'.$entry.'" onclick='."'".'$(".owl-carousel").trigger("to.owl.carousel", ['.$count_picture.', 1000000, true])'."'".'>'."\n";
 			//echo "<img src='./images_haar/$entry' height='15%' width='15%'>\n";
 			echo "</div>\n";
             //echo "$entry\n";
         }
+	$count_picture+=1;
     }
 
     closedir($handle);
