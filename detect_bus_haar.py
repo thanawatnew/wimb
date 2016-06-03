@@ -2,7 +2,7 @@ import cv2
 import os
 from subprocess import call
 import subprocess
-import detect_bus_number
+import detect_bus_number,detect_bus_color
 import shutil
 #from start_wimb import check_init_files_and_folders
 path=os.path.abspath('.')
@@ -10,6 +10,7 @@ file_type='.jpg'
 is_ocr=False
 is_debug=True
 is_bgs = True
+is_color_check = True
 #file_name = 'rgb_20160112_123002'
 def detect(img,cascade):
 	rects = cascade.detectMultiScale(img, 1.3, 4, cv2.CASCADE_SCALE_IMAGE, (24,24))
@@ -37,15 +38,18 @@ def box(rects, img,img2,img3,img4,path,file_name,file_type,is_detect_bus_number)
 			call([path+'/get_DPMeanBGS_mask',path+'/images/'+file_name+file_type,path+'/models/images_bgs_model_median/'+file_name.split('_')[0]+'_model_median'+file_type,path+'/images_bgs_mask/'+file_name+'_bgs_mask'+file_type],stdout=open(os.devnull, 'wb'),stderr=subprocess.STDOUT)
 			img_bgs_mask = cv2.imread(path+'/images_bgs_mask/'+file_name+'_bgs_mask'+file_type,0)
 			ret,img_bgs_mask_2 = cv2.threshold(img_bgs_mask,200,255,cv2.THRESH_BINARY)
+			img_bgs_mask_3 = img_bgs_mask_2[y1:y2,x1:x2]
 			isWhite=False
-			for i in xrange(len(img)):
-				for j in xrange(len(img[i])):
-					if img_bgs_mask_2[i][j]==255:
+			for i in xrange(len(img_bgs_mask_3)):
+				for j in xrange(len(img_bgs_mask_3[i])):
+					if img_bgs_mask_3[i][j]==255:
 						isWhite=True
 						break
 				if isWhite: break
 			if not isWhite: 
 				continue # bgs unable to detect the moving object, so it skipped this cropped box 
+		if is_color_check:
+			if not detect_bus_color.detect_bus_color(img[y1:y2,x1:x2],file_name+'_result_'+str(count)+file_type): continue
 				
 		cv2.rectangle(img, (x1, y1), (x2, y2), (127, 255, 0), 2)
 		cv2.imwrite(path+'/images_haar/'+file_name+'_result_'+str(count)+file_type, crop_img)
@@ -91,7 +95,7 @@ def detect_bus_haar(path,file_name,file_type,is_ocr,cascade):
 	 #cv2.imshow("frame", img)
 def detect_bus_haar_group(path):
 	count=0#0+215-1
-	cascade = cv2.CascadeClassifier(path+"/models/cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#cascade_bus_front_175_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_bus_front_130_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml") #"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#/cascade_front_30_stage_wrong.xml")#cascade_30_stages_1000_pos_3000_neg.xml")#cascade_front_30_stage_wrong.xml") #"cascade_front_19_stage_1000_pos_3000_neg.xml")#"/cascade_front_30_stage_wrong.xml")
+	cascade = cv2.CascadeClassifier(path+"/models/wimb_cascade_26_stage_front_1000_pos_3000_net_wrong.xml")#cascade_wimb_bus_front_20_stages_1000_pos_3000_neg_wrong.xml")#cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#cascade_bus_front_175_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_bus_front_130_stages_1000_pos_3000_neg.xml")#"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"/models/cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml") #"/models/cascade_wimb_bus_front_33_stages_1000_pos_3000_neg_wrong.xml")#"cascade_wimb_bus_front_100_stages_1000_pos_3000_neg.xml")#/cascade_front_30_stage_wrong.xml")#cascade_30_stages_1000_pos_3000_neg.xml")#cascade_front_30_stage_wrong.xml") #"cascade_front_19_stage_1000_pos_3000_neg.xml")#"/cascade_front_30_stage_wrong.xml")
 	for file_name_with_extension in os.listdir(path+'/images/')[count:]:
 	 count+=1
 	 if is_debug: print 'progress = '+str(count)+'/'+str(len(os.listdir(path+'/images/')))+' '+str(count*100.0/len(os.listdir(path+'/images/')))
@@ -136,6 +140,7 @@ def check_init_files_and_folders():
 	'images_haar',
 	'images_haar_result',
 	'images_bgs_mask',
+	'images_color',
 	'images_number',
 	'images_number_result',
 	'models',
