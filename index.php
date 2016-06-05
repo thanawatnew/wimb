@@ -192,7 +192,7 @@ $(document).ready(function() {
 <body>
 <iframe src="http://www.bmatraffic.com" width="0" height="0"></iframe>
 <!--<div id="map-canvas" style="width: auto; height: 75%; width: 100%; border: 2px solid #73AD21"></div>-->
-<div id="map-canvas" style="width: auto; height: 65%; width: 100%; "></div>
+<div id="map-canvas" style="height: 65%; width: 100%; "></div>
 <div class="row">
         <div class="large-12 columns">
           <div class="owl-carousel" id="gallery" style="width:100%;">
